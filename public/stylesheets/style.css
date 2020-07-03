@@ -33,3 +33,6 @@ a i {
   text-align: center;
   margin: 5px 0;
 }
+#mainMessages{
+  height: 100%;
+}
