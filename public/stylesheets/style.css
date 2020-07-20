@@ -2,11 +2,9 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-
 a {
   color: #00B7FF;
 }
-
 a i {
   margin-right: 0.4rem;
 }
@@ -19,7 +17,6 @@ a i {
   font-weight: bold;
   text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.66);
 }
-
 .row:last-of-type {
   margin-bottom: 0;
 }
@@ -36,7 +33,6 @@ a i {
 #mainMessages{
   height: 100%;
 }
-
 .container-fluid {
   padding-right:0;
   padding-left:0;
@@ -47,27 +43,26 @@ a i {
   grid-row-gap: 0px;
 }
 
-
 .scrollbar-deep-purple::-webkit-scrollbar-track {
 -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
 background-color: #F5F5F5;
 border-radius: 10px; }
 
 .scrollbar-deep-purple::-webkit-scrollbar {
-width: 12px;
+width: 10px;
 background-color: #F5F5F5; }
 
 .scrollbar-deep-purple::-webkit-scrollbar-thumb {
-border-radius: 10px;
+border-radius: 12px;
 -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-background-color: #512da8; }
+background-color: orange; }
 
 .scrollbar-deep-purple {
-scrollbar-color: #512da8 #F5F5F5;
-}
+scrollbar-color: orange #F5F5F5;}
+
 .bordered-deep-purple::-webkit-scrollbar-track {
 -webkit-box-shadow: none;
-border: 1px solid #512da8; }
+border: 1px solid blue; }
 
 .bordered-deep-purple::-webkit-scrollbar-thumb {
 -webkit-box-shadow: none; }
@@ -89,3 +84,30 @@ height: 200px; }
   border: none;
   background-color: white;
 }
+.userList {
+  position: relative;
+  overflow-y: scroll;
+  height: 600px; }
+
+.colUsersList {
+  border: none;
+  background-color: white; }
+
+.channelList {
+  position: relative;
+  overflow-y: scroll;
+  height: 200px; }
+
+.colChannelList {
+  border: none;
+  background-color: white;
+  min-height: 35px; }
+
+.messageList {
+  position: relative;
+  overflow-y: scroll;
+  height: 600px; }
+
+.colMessageList {
+  border: none;
+  background-color: white;}
