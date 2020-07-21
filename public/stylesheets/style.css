@@ -78,7 +78,7 @@ width: 6px; }
 .friendsList {
 position: relative;
 overflow-y: scroll;
-height: 200px; }
+height: 275px; }
 
 .colFriendsList {
   border: none;
@@ -96,7 +96,7 @@ height: 200px; }
 .channelList {
   position: relative;
   overflow-y: scroll;
-  height: 200px; }
+  height: 275px; }
 
 .colChannelList {
   border: none;
@@ -106,8 +106,13 @@ height: 200px; }
 .messageList {
   position: relative;
   overflow-y: scroll;
-  height: 600px; }
+  height: 632px; }
 
 .colMessageList {
   border: none;
   background-color: white;}
+
+.col{
+  border: none;
+  background-color: white;
+}

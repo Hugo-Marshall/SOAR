@@ -5,7 +5,7 @@ var router = express.Router();
 router.get('/loggedIn', function(req, res, next) {
   res.render('loggedIn', { title: 'Express' });
 });
-router.get('/oggedOut', function(req, res, next) {
+router.get('loggedOut', function(req, res, next) {
   res.render('loggedOut', { title: 'Express' });
 });
 router.get('/logIn', function(req, res, next) {
