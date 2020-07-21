@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SOAR</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/2ea5bc6e34.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<div id="main">
+    <span class="align-middle">
+        <div class="container-fluid align-items-center" style="width: 1024px; height: 1000px">
+            <div class="row m-auto p-auto d-flex align-items-center h-100">
+                <div class="m-auto col-6 d-flex align-items-center h-100">
+                    <div class="container-fluid h-100 d-flex align-items-center">
+                        <div class="row p-0 m-auto d-flex align-items-center">
+                            <div class="m-0 p-0 col d-flex align-items-center">
+                                <div class="container-fluid h-100">
+                                    <div class="row-6 p-0 m-2">
+                                        <div class="container-fluid overflow-auto mb-md-0 w-100 containerLogInLogo">
+                                            <div class="m-0 p-0 row no-gutters border border-dark">
+                                                <div class="my-4 mx-0.5 p-3 col-11 colLogInLogo">
+                                                    SOAR
+                                                </div>
+                                                <div class="m-0 p-0 col-1 colLogInLogo">
+                                                    <div class="d-flex flex-row-reverse">
+                                                        <a href="loggedOut.ejs"><i class="fa fa-times" aria-hidden="true"></i></a>                                          
+                                                    </div> 
+                                                </div>                                                                                   
+                                            </div>  
+                                        </div>  
+                                    </div>
+                                    <div class="row p-0 m-2 border border-dark">
+                                        <div class="container-fluid">
+                                            <div class="row p-0 m-2">
+                                                Email
+                                            </div>
+                                            <div class="row p-0 m-2">
+                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row p-0 m-2 border border-dark">
+                                        <div class="container-fluid">
+                                            <div class="row p-0 m-2">
+                                                Password
+                                            </div>
+                                            <div class="row p-0 m-2">
+                                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row p-0 m-2 border border-dark">
+                                        <button type="button" class="btn btn-light btn-lg btn-outline-dark centre mx-auto p-2 my-2"><a href="loggedin.ejs">Login</a></button>
+                                    </div>
+                                    <div class="row p-0 m-2 border border-dark">
+                                        <button type="button" class="btn btn-light btn-lg btn-outline-dark centre mx-auto p-2 my-2"><a href="createAccount.ejs">Create Account</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                      
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div><!-- end #main -->
+<%- include('partials/footer'); %>
