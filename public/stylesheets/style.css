@@ -164,3 +164,9 @@ height: 275px; }
 #add-user-plus {
   min-height: 4vw;
 }
+
+/* #update-avatar */
+.newAvatarImage{
+  min-width: 12vw;
+  min-height: 12vw;
+}
