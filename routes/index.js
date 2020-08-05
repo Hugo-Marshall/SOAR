@@ -11,11 +11,11 @@ router.get('/loggedIn', function(req, res, next) {
 router.get('loggedOut', function(req, res, next) {
   res.render('loggedOut', { title: 'Express' });
 });
-router.get('/createAccount', function(req, res, next) {
-  res.render('createAccount', { title: 'Express' });
+router.get('/register', function(req, res, next) {
+  res.render('register', { title: 'Express' });
 });
-router.get('/accountSettings', function(req, res, next) {
-  res.render('accountSettings', { title: 'Express' });
+router.get('/account', function(req, res, next) {
+  res.render('account', { title: 'Express' });
 });
 router.get('/addChannel', function(req, res, next) {
   res.render('addChannel', { title: 'Express' });
