@@ -9,176 +9,100 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stylesheets/style.css">
 </head>
-<div id="main h-100">
-    <span class="align-middle h-100">
-        <div class="container-fluid align-items-center h-100">
-                                <div class="m-0 py-1 px-0 row no-gutters">
-                                    <div class="m-0 p-0 col">
-                                        <div class="container-fluid m-0 p-0">
-                                            <div class="m-0 p-0 row no-gutters h-100">
-                                                <div class="m-0 p-0 col-3 border border-dark align-items-center d-flex justify-content-center" style= "height: 4vw">
-                                                    <p class="m-1">Account</p>
-                                                    <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="m-1 avatar rounded-circle border border-dark" style="max-width: 3vw; max-height: 3vw;"> 
-                                                    <a href="account" class="m-1"><i class="fa fa-cog" aria-hidden="true"></i></a>
-                                                </div>
-                                                <div class="m-auto p-auto col-3 border border-dark align-items-center d-flex justify-content-center" style= "height: 4vw">
-                                                    <a href="index">
-                                                        Log Out
-                                                    </a>
-                                                </div>
-                                                <div class="m-0 p-0 col-3 border border-dark align-items-center d-flex justify-content-center" style= "height: 4vw">
-                                                    <div class="dropdown">
-                                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        Channels
-                                                        </button>
-                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                                        <button class="dropdown-item" type="button"><a href="loggedIn">Channel X</a></button>
-                                                        <button class="dropdown-item" type="button"><a href="loggedIn">Channel X</a></button>
-                                                        <button class="dropdown-item" type="button"><a href="loggedIn">Channel X</a></button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="m-auto p-auto col-3 border border-dark align-items-center d-flex justify-content-center" style= "height: 4vw">
-                                                    SOAR
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                        <form action="/account" method="post" enctype="multipart/form-data"></form>
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="container-fluid h-100">
-                                        <div class="row p-0 my-2 border border-dark" style="min-height: 7vw;">
-                                            <div class="container-fluid">
-                                                <div class="row p-0 m-2">
-                                                    Current Email
-                                                </div>
-                                                <div class="row p-0 m-2">
-                                                    <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Current Email" readonly>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row p-0 my-2 border border-dark" style="min-height: 7vw;">
-                                            <div class="container-fluid">
-                                                <div class="row p-0 m-2">
-                                                    Current Account Name
-                                                </div>
-                                                <div class="row p-0 m-2">
-                                                    <input type="accountName" class="form-control" aria-describedby="emailHelp" placeholder="Current Account Name" readonly>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row p-0 my-2 border border-dark centre" style="min-height: 7vw;">
-                                            <div class="my-1 p-0 row align-items-center no-gutters w-100">
-                                                <div class="m-0 p-0 col-6 colFriendsList text-center">
-                                                    <strong>John Doe</strong>
-                                                </div>
-                                                <div class="m-0 p-0 col-6 colFriendsList">
-                                                    <div class="text-center">
-                                                        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center" style="max-width: 6vw; max-height: 6vw;">     
-                                                    </div> 
-                                                </div>                                                                                   
-                                            </div>  
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="container-fluid h-100">
-                                        <div class="row p-0 my-2 border border-dark" style="min-height: 7vw;">
-                                            <div class="container-fluid">
-                                                <div class="row p-0 m-2">
-                                                    New Email
-                                                </div>
-                                                <div class="row p-0 m-2">
-                                                    <input name="email" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row p-0 my-2 border border-dark" style="min-height: 7vw;">
-                                            <div class="container-fluid">
-                                                <div class="row p-0 m-2">
-                                                    New Account Name
-                                                </div>
-                                                <div class="row p-0 m-2">
-                                                    <input name="displayName" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter account name">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row p-0 my-2 border border-dark" style="min-height: 7vw;">
-                                            <div class="container-fluid">
-                                                <div class="row p-0 m-2">
-                                                    New Avatar
-                                                </div>
-                                                <div class="row p-0 m-2">
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-                                                            <span class="input-group-text py-0" id="inputGroupFileAddon01">Upload</span>
-                                                        </div>
-                                                        <div class="custom-file">
-                                                            <input name="avatar" type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-                                                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>  
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row p-0 my-2 border border-dark" style="min-height: 7vw;">
-                                <button type="submit" class="btn btn-light btn-lg btn-outline-dark centre mx-auto p-2 my-2">Change Account Details</button>
-                            </div>
-                        </form>
-                        <form action="/password" method="post" enctype="multipart/form-data"></form>
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="container-fluid h-100">
-                                        <div class="row p-0 my-2 border border-dark" style="min-height: 7vw;">
-                                            <div class="container-fluid">
-                                                <div class="row p-0 m-2">
-                                                    Old Password
-                                                </div>
-                                                <div class="row p-0 m-2">
-                                                    <input type="password" class="form-control" placeholder="Old Password" readonly>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="container-fluid h-100">
-                                        <div class="row p-0 my-2 border border-dark" style="min-height: 7vw;">
-                                            <div class="container-fluid">
-                                                <div class="row p-0 m-2">
-                                                    Password
-                                                </div>
-                                                <div class="row p-0 m-2">
-                                                    <input name="password" type="password" class="form-control" placeholder="Password">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row p-0 my-2 border border-dark" style="min-height: 7vw;">
-                                            <div class="container-fluid">
-                                                <div class="row p-0 m-2">
-                                                    Confirm Password
-                                                </div>
-                                                <div class="row p-0 m-2">
-                                                    <input name="passwordConfirm" type="password" class="form-control" placeholder="Confirm Password">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row p-0 my-2 border border-dark" style="min-height: 7vw;">
-                                <button type="submit" class="btn btn-light btn-lg btn-outline-dark centre mx-auto p-2 my-2">Update Password</button>
-                            </div>
-                        </form>
+<div class="container-fluid">
+    <div class="my-1 row">
+        <div class="mx-auto col-10">
+            <div class="row">
+                <div class="col-3 border border-dark height-4vw">
+                    <p class="m-1">Account</p>
+                    <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="m-1 rounded-circle border border-dark maxsize-3vw"> 
+                    <a href="account" class="m-1"><i class="fa fa-cog" aria-hidden="true"></i></a>
+                </div>
+                <a href="/" class="col-3 border border-dark height-4vw">
+                    Log Out
+                </a>
+                <div class="dropdown col-3 border border-dark height-4vw">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Channels
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <button class="dropdown-item" type="button"><a href="loggedIn">Channel X</a></button>
+                    <button class="dropdown-item" type="button"><a href="loggedIn">Channel X</a></button>
+                    <button class="dropdown-item" type="button"><a href="loggedIn">Channel X</a></button>
                     </div>
                 </div>
-            </div>                      
-        </div> 
-    </span>
+                <div class="col-3 border border-dark height-4vw">
+                    SOAR
+                </div>
+                <div class="col-6 border border-dark minsize-7vw my-2 mx-0">
+                    <form action="/account" method="post" enctype="multipart/form-data">
+                    <p class="m-2"> Current Email</p> 
+                    <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Current Email" readonly>
+                </div>
+                <div class="col-6 border border-dark minsize-7vw my-2 mx-0">
+                    <p class="m-2"> New Email</p>
+                    <input name="email" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
+                </div>
+                <div class="col-6 border border-dark minsize-7vw my-2 mx-0">
+                    <p class="m-2"> Current Account Name</p> 
+                    <input type="accountName" class="form-control" aria-describedby="emailHelp" placeholder="Current Account Name" readonly>
+                </div>
+                <div class="col-6 border border-dark minsize-7vw my-2 mx-0">
+                    <p class="m-2"> New Account Name</p>
+                    <input name="displayName" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter account name">
+                </div>
+                <div class="col-6 border border-dark minsize-7vw my-2 mx-0">
+                    <div class="row align-items-center h-100">
+                        <div class="col-6 text-center">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="col-6 text-center">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center minsize-5vw">     
+                        </div>                                                                                   
+                    </div>  
+                </div>
+                <div class="col-6 border border-dark minsize-7vw my-2 mx-0">
+                    <p class="m-2"> New Avatar</p>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text py-0" id="inputGroupFileAddon01">Upload</span>
+                        </div>
+                        <div class="custom-file">
+                            <input name="avatar" type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 border border-dark minsize-7vw my-2 mx-0">
+                    <div class="row h-100">
+                        <button type="submit" class="btn btn-light btn-lg btn-outline-dark p-2 my-2 m-auto">Change Account Details</button>
+                        </form>
+                    </div>  
+                </div>
+                <div class="col-6 border border-dark minsize-7vw my-2 mx-0">
+                    <form action="/password" method="post" enctype="multipart/form-data">
+                    <p class="m-2"> Old Password</p>
+                    <input type="password" class="form-control" placeholder="Old Password" readonly>
+                </div>
+                <div class="col-6 border border-dark minsize-7vw my-2 mx-0">
+                    <p class="m-2"> Password</p>
+                    <input name="password" type="password" class="form-control" placeholder="Password">
+                </div>
+                <div class="col-6 border border-dark minsize-7vw my-2 mx-0">
+                    <p class="m-2"></p>
+                </div>
+                <div class="col-6 border border-dark minsize-7vw my-2 mx-0">
+                    <p class="m-2"> Confirm Password</p>
+                    <input name="passwordConfirm" type="password" class="form-control" placeholder="Confirm Password">
+                </div>
+                <div class="col-12 border border-dark minsize-7vw my-2 mx-0">
+                    <div class="row h-100">
+                        <button type="submit" class="btn btn-light btn-lg btn-outline-dark p-2 my-2 m-auto">Update Password</button>
+                        </form>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>
 </div><!-- end #main -->
 <%- include('partials/footer'); %>

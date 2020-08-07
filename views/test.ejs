@@ -9,170 +9,453 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stylesheets/style.css">
 </head>
-<div id="main h-100">
-    <span class="align-middle h-100">
-        <div class="container-fluid align-items-center h-100">
-            <div class="row">
-                <div class="col" style= "height: 4vw">
-                    <p class="m-1">Account</p>
-                    <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="m-1 avatar rounded-circle border border-dark" style="max-width: 3vw; max-height: 3vw;"> 
-                    <a href="account" class="m-1"><i class="fa fa-cog" aria-hidden="true"></i></a>
-                </div>
-                <div class="col" style= "height: 4vw">
-                    <a href="index">
-                        Log Out
-                    </a>
-                </div>
-                <div class="col" style= "height: 4vw">
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Channels
+
+<div class="container-fluid">
+    <div class="row m-1 no-gutters">
+        <div class="col-3 border border-dark height-4vw">
+            <p class="m-1">Account</p>
+            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="m-1 rounded-circle border border-dark maxsize-3vw"> 
+            <a href="account" class="m-1"><i class="fa fa-cog" aria-hidden="true"></i></a>
+        </div>
+        <a href="/" class="col-3 border border-dark height-4vw">
+            Log Out
+        </a>
+        <div class="dropdown col-3 border border-dark height-4vw">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Channels
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <button class="dropdown-item" type="button"><a href="loggedIn">Channel X</a></button>
+            <button class="dropdown-item" type="button"><a href="loggedIn">Channel X</a></button>
+            <button class="dropdown-item" type="button"><a href="loggedIn">Channel X</a></button>
+            </div>
+        </div>
+        <div class="col-3 border border-dark height-4vw">
+            SOAR
+        </div>
+        <div class="col-2 col border border-dark p-0">
+            <div class="m-0 p-2 col">
+                <strong>Friends</strong>
+            </div>
+            <div class="row friendsList scrollbar-deep-purple bordered-deep-purple thin m-1">
+                <div class="container-fluid overflow-auto m-0 p-1">
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div>  
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                </div>                                                 
+            </div>
+            <div class="m-0 p-2 col">
+                <a href="addFriend">Add Friend</a>
+                <a href="addFriend"><i class="fa fa-plus" aria-hidden="true"></i></a>
+            </div>
+            <div class="m-0 p-2 col">
+                <a href="editChannel">Channels</a>
+                <a href="editChannel"><i class="fa fa-cog" aria-hidden="true"></i></a>
+            </div>
+            <div class="row channelList scrollbar-deep-purple bordered-deep-purple thin m-1">
+                <div class="container-fluid overflow-auto m-0 p-1">
+                    <div class="col border border-primary">Channel X</div>
+                    <div class="col border border-primary">Channel X</div>
+                    <div class="col border border-primary">Channel X</div>
+                    <div class="col border border-primary">Channel X</div>
+                    <div class="col border border-primary">Channel X</div>
+                    <div class="col border border-primary">Channel X</div>
+                    <div class="col border border-primary">Channel X</div>
+                    <div class="col border border-primary">Channel X</div>
+                    <div class="col border border-primary">Channel X</div>
+                </div>                                                  
+            </div>
+            <div class="m-0 p-2 col">
+                <a href="addChannel">Create Channel</a>
+                <a href="addChannel"><i class="fa fa-plus" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="row messageList scrollbar-deep-purple bordered-deep-purple thin m-1 mt-0">
+                <div class="container-fluid overflow-auto pb-1 pt-0 pl-0 pr-1">
+                    <div class="mt-0 mb-2 row no-gutters border border-primary">
+                        <div class="col-2 col">                                          
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" class="rounded-circle border border-dark minsize-7vw">
+                        </div> 
+                        <div class="col-10 col">                                          
+                            <p class="m-auto">
+                                A king and queen once upon a time reigned in a country a great way off, where there were in those days fairies. Now this king and queen had plenty of money, 
+                                and plenty of fine clothes to wear, and plenty of good things to eat and drink, and a coach to ride out in every day: but though they had been married many 
+                                years they had no children, and this grieved them very much indeed. But one day as the queen was walking by the side of the river, at the bottom of the garden, 
+                                she saw a poor little fish, that had thrown itself out of the water, and lay gasping and nearly dead on the bank. 
+                            </p> 
+                        </div>   
+                    </div>
+                    <div class="mt-0 mb-2 row no-gutters border border-primary">
+                        <div class="col-2 col">                                          
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" class="rounded-circle border border-dark minsize-7vw">
+                        </div> 
+                        <div class="col-10 col">                                          
+                            <p class="m-auto">
+                                A king and queen once upon a time reigned in a country a great way off, where there were in those days fairies. Now this king and queen had plenty of money, 
+                                and plenty of fine clothes to wear, and plenty of good things to eat and drink, and a coach to ride out in every day: but though they had been married many 
+                                years they had no children, and this grieved them very much indeed. But one day as the queen was walking by the side of the river, at the bottom of the garden, 
+                                she saw a poor little fish, that had thrown itself out of the water, and lay gasping and nearly dead on the bank. 
+                            </p> 
+                        </div>   
+                    </div>
+                    <div class="mt-0 mb-2 row no-gutters border border-primary">
+                        <div class="col-2 col">                                          
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" class="rounded-circle border border-dark minsize-7vw">
+                        </div> 
+                        <div class="col-10 col">                                          
+                            <p class="m-auto">
+                                A king and queen once upon a time reigned in a country a great way off, where there were in those days fairies. Now this king and queen had plenty of money, 
+                                and plenty of fine clothes to wear, and plenty of good things to eat and drink, and a coach to ride out in every day: but though they had been married many 
+                                years they had no children, and this grieved them very much indeed. But one day as the queen was walking by the side of the river, at the bottom of the garden, 
+                                she saw a poor little fish, that had thrown itself out of the water, and lay gasping and nearly dead on the bank. 
+                            </p> 
+                        </div>   
+                    </div>
+                    <div class="mt-0 mb-2 row no-gutters border border-primary">
+                        <div class="col-2 col">                                          
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" class="rounded-circle border border-dark minsize-7vw">
+                        </div> 
+                        <div class="col-10 col">                                          
+                            <p class="m-auto">
+                                A king and queen once upon a time reigned in a country a great way off, where there were in those days fairies. Now this king and queen had plenty of money, 
+                                and plenty of fine clothes to wear, and plenty of good things to eat and drink, and a coach to ride out in every day: but though they had been married many 
+                                years they had no children, and this grieved them very much indeed. But one day as the queen was walking by the side of the river, at the bottom of the garden, 
+                                she saw a poor little fish, that had thrown itself out of the water, and lay gasping and nearly dead on the bank. 
+                            </p> 
+                        </div>   
+                    </div>
+                    <div class="mt-0 mb-2 row no-gutters border border-primary">
+                        <div class="col-2 col">                                          
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" class="rounded-circle border border-dark minsize-7vw">
+                        </div> 
+                        <div class="col-10 col">                                          
+                            <p class="m-auto">
+                                A king and queen once upon a time reigned in a country a great way off, where there were in those days fairies. Now this king and queen had plenty of money, 
+                                and plenty of fine clothes to wear, and plenty of good things to eat and drink, and a coach to ride out in every day: but though they had been married many 
+                                years they had no children, and this grieved them very much indeed. But one day as the queen was walking by the side of the river, at the bottom of the garden, 
+                                she saw a poor little fish, that had thrown itself out of the water, and lay gasping and nearly dead on the bank. 
+                            </p> 
+                        </div>   
+                    </div>
+                    <div class="mt-0 mb-2 row no-gutters border border-primary">
+                        <div class="col-2 col">                                          
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" class="rounded-circle border border-dark minsize-7vw">
+                        </div> 
+                        <div class="col-10 col">                                          
+                            <p class="m-auto">
+                                A king and queen once upon a time reigned in a country a great way off, where there were in those days fairies. Now this king and queen had plenty of money, 
+                                and plenty of fine clothes to wear, and plenty of good things to eat and drink, and a coach to ride out in every day: but though they had been married many 
+                                years they had no children, and this grieved them very much indeed. But one day as the queen was walking by the side of the river, at the bottom of the garden, 
+                                she saw a poor little fish, that had thrown itself out of the water, and lay gasping and nearly dead on the bank. 
+                            </p> 
+                        </div>   
+                    </div>
+                    <div class="mt-0 mb-2 row no-gutters border border-primary">
+                        <div class="col-2 col">                                          
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" class="rounded-circle border border-dark minsize-7vw">
+                        </div> 
+                        <div class="col-10 col">                                          
+                            <p class="m-auto">
+                                A king and queen once upon a time reigned in a country a great way off, where there were in those days fairies. Now this king and queen had plenty of money, 
+                                and plenty of fine clothes to wear, and plenty of good things to eat and drink, and a coach to ride out in every day: but though they had been married many 
+                                years they had no children, and this grieved them very much indeed. But one day as the queen was walking by the side of the river, at the bottom of the garden, 
+                                she saw a poor little fish, that had thrown itself out of the water, and lay gasping and nearly dead on the bank. 
+                            </p> 
+                        </div>   
+                    </div>
+                    <div class="mt-0 mb-2 row no-gutters border border-primary">
+                        <div class="col-2 col">                                          
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" class="rounded-circle border border-dark minsize-7vw">
+                        </div> 
+                        <div class="col-10 col">                                          
+                            <p class="m-auto">
+                                A king and queen once upon a time reigned in a country a great way off, where there were in those days fairies. Now this king and queen had plenty of money, 
+                                and plenty of fine clothes to wear, and plenty of good things to eat and drink, and a coach to ride out in every day: but though they had been married many 
+                                years they had no children, and this grieved them very much indeed. But one day as the queen was walking by the side of the river, at the bottom of the garden, 
+                                she saw a poor little fish, that had thrown itself out of the water, and lay gasping and nearly dead on the bank. 
+                            </p> 
+                        </div>   
+                    </div>
+                </div>                                  
+            </div>
+            <div class="m-0 px-1 pb-0 pt-1 row">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <button class="btn btn-outline-secondary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-plus" aria-hidden="true"></i>
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <button class="dropdown-item" type="button"><a href="loggedIn">Channel X</a></button>
-                        <button class="dropdown-item" type="button"><a href="loggedIn">Channel X</a></button>
-                        <button class="dropdown-item" type="button"><a href="loggedIn">Channel X</a></button>
+                        <div class="dropdown-menu p-0">
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="inputGroupFile02">
+                                    <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
+                                </div>
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="">Upload</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="m-auto p-auto col-3 border border-dark align-items-center d-flex justify-content-center" style= "height: 4vw">
-                    SOAR
+                    <input type="text" class="form-control" aria-label="Text input with dropdown button">
                 </div>
             </div>
-                        <form action="/account" method="post" enctype="multipart/form-data">
-
-                            <div class="form-control">
-                                <label>
-                                    Current Email
-                                </label>
-                                 <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Current Email" readonly>
-                            </div>
-                        </form>
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="container-fluid h-100">
-                                        <div class="row p-0 my-2 border border-dark" style="min-height: 7vw;">
-                                        </div>
-                                        <div class="row p-0 my-2 border border-dark" style="min-height: 7vw;">
-                                            <div class="container-fluid">
-                                                <div class="row p-0 m-2">
-                                                    Current Account Name
-                                                </div>
-                                                <div class="row p-0 m-2">
-                                                    <input type="accountName" class="form-control" aria-describedby="emailHelp" placeholder="Current Account Name" readonly>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row p-0 my-2 border border-dark centre" style="min-height: 7vw;">
-                                            <div class="my-1 p-0 row align-items-center no-gutters w-100">
-                                                <div class="m-0 p-0 col-6 colFriendsList text-center">
-                                                    <strong>John Doe</strong>
-                                                </div>
-                                                <div class="m-0 p-0 col-6 colFriendsList">
-                                                    <div class="text-center">
-                                                        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center" style="max-width: 6vw; max-height: 6vw;">     
-                                                    </div> 
-                                                </div>                                                                                   
-                                            </div>  
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="container-fluid h-100">
-                                        <div class="row p-0 my-2 border border-dark" style="min-height: 7vw;">
-                                            <div class="container-fluid">
-                                                <div class="row p-0 m-2">
-                                                    New Email
-                                                </div>
-                                                <div class="row p-0 m-2">
-                                                    <input name="email" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row p-0 my-2 border border-dark" style="min-height: 7vw;">
-                                            <div class="container-fluid">
-                                                <div class="row p-0 m-2">
-                                                    New Account Name
-                                                </div>
-                                                <div class="row p-0 m-2">
-                                                    <input name="displayName" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter account name">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row p-0 my-2 border border-dark" style="min-height: 7vw;">
-                                            <div class="container-fluid">
-                                                <div class="row p-0 m-2">
-                                                    New Avatar
-                                                </div>
-                                                <div class="row p-0 m-2">
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-                                                            <span class="input-group-text py-0" id="inputGroupFileAddon01">Upload</span>
-                                                        </div>
-                                                        <div class="custom-file">
-                                                            <input name="avatar" type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-                                                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>  
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row p-0 my-2 border border-dark" style="min-height: 7vw;">
-                                <button type="submit" class="btn btn-light btn-lg btn-outline-dark centre mx-auto p-2 my-2">Change Account Details</button>
-                            </div>
-                        </form>
-                        <form action="/password" method="post" enctype="multipart/form-data"></form>
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="container-fluid h-100">
-                                        <div class="row p-0 my-2 border border-dark" style="min-height: 7vw;">
-                                            <div class="container-fluid">
-                                                <div class="row p-0 m-2">
-                                                    Old Password
-                                                </div>
-                                                <div class="row p-0 m-2">
-                                                    <input type="password" class="form-control" placeholder="Old Password" readonly>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="container-fluid h-100">
-                                        <div class="row p-0 my-2 border border-dark" style="min-height: 7vw;">
-                                            <div class="container-fluid">
-                                                <div class="row p-0 m-2">
-                                                    Password
-                                                </div>
-                                                <div class="row p-0 m-2">
-                                                    <input name="password" type="password" class="form-control" placeholder="Password">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row p-0 my-2 border border-dark" style="min-height: 7vw;">
-                                            <div class="container-fluid">
-                                                <div class="row p-0 m-2">
-                                                    Confirm Password
-                                                </div>
-                                                <div class="row p-0 m-2">
-                                                    <input name="passwordConfirm" type="password" class="form-control" placeholder="Confirm Password">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row p-0 my-2 border border-dark" style="min-height: 7vw;">
-                                <button type="submit" class="btn btn-light btn-lg btn-outline-dark centre mx-auto p-2 my-2">Update Password</button>
-                            </div>
-                        </form>
-                    </div>
+        </div>
+        <div class="col-2 col border border-dark p-0">
+            <div class="m-0 p-2 col">
+                <strong>Users</strong>
+            </div>
+            <div class="row userList scrollbar-deep-purple bordered-deep-purple thin m-1 mt-0">
+                <div class="container-fluid overflow-auto pb-1 pt-0 pl-0 pr-1">
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div>  
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div>  
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                </div>                                  
+            </div>
+            <div class="m-0 p-0 row no-gutters">
+                <div class="m-0 p-1 col">
+                    <!-- Search form -->
+                    <form class="form-inline d-flex justify-content-center md-form form-sm">
+                    <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search" aria-label="Search">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    </form>
                 </div>
-            </div>                      
-        </div> 
-    </span>
-</div><!-- end #main -->
+            </div>
+        </div>
+    </div>
+</div>
 <%- include('partials/footer'); %>

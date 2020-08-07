@@ -29,9 +29,6 @@ a i {
   text-align: center;
   margin: 5px 0;
 }
-#mainMessages{
-  height: 100%;
-}
 .container-fluid {
   padding-right:0;
   padding-left:0;
@@ -40,6 +37,35 @@ a i {
 }
 .grid-container {
   grid-row-gap: 0px;
+}
+/* navbar */
+.maxsize-3vw{
+  max-width: 3vw;
+  max-height: 3vw;
+}
+.height-4vw{
+  min-height: 4vw;
+  max-height: 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.minsize-7vw{
+  min-height: 7vw;
+  max-height: 7vw;
+}
+.minsize-6vw{
+  min-height: 6vw;
+  max-height: 6vw;
+}
+.minsize-5vw{
+  min-height: 5vw;
+  max-height: 5vw;
+}
+.minsize-3vw{
+  min-height: 3vw;
+  max-height: 3vw;
 }
 
 /* Sidebar */
@@ -87,7 +113,7 @@ height: 275px; }
 .userList {
   position: relative;
   overflow-y: scroll;
-  height: 600px; }
+  height: 622px; }
 
 .colUsersList {
   border: none;
@@ -106,7 +132,7 @@ height: 275px; }
 .messageList {
   position: relative;
   overflow-y: scroll;
-  height: 632px; }
+  height: 654px; }
 
 .colMessageList {
   border: none;
