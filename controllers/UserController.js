@@ -20,6 +20,7 @@ class UserController{
         this.setVariables();
 
         // Add all routing middleware for user endpoints
+        AraDTApp.get('/test', this.test);
         AraDTApp.get('/register', this.signup);
         AraDTApp.post('/register', this.register);
         AraDTApp.post('/login', this.login);
@@ -28,6 +29,11 @@ class UserController{
         AraDTApp.post('/account', this.updateAccount);
         AraDTApp.post('/password', this.updatePassword);
     }
+
+    test(request, response, next) {
+        response.render('test');
+    }
+    
 
     signup(request, response, next) {
         response.render('register');
@@ -121,48 +127,80 @@ class UserController{
   
 
     /* YOU NEED TO ADD COMMENTS FROM HERE ON */
-
+    /**
+     * Asynchronous function that handles POST form submission to '/account'
+     * On success, redirects to '/account'
+     * Onfailure, redirects to '/account' with error message
+     * Requires the following POST form name fields:
+     * 
+     * @param {string}      request.body.email              email form field
+     * @param {string}      request.body.password           password form field
+     * @param {string}      request.body.passwordConfirm    passwordConfirm form field
+     * 
+     * @returns {Object}    response.redirect object
+     */
     updateAccount =  async (request, response) => {
-
+        // Try to see if form submission is valid
         var currentUser = AraDTUserModel.getCurrentUser();
+        // gets current user information
         if (currentUser) {
             try{
                 await AraDTUserModel.update(request, response)
                     .then(() => {
+                        // account update information successful, so redirects to account
                         response.locals.errors.profile = ['Your details have been updated'];
                         response.render('account');
                     }).catch((error) => {
+                        // account update information not succesfful, so keeps user on account and displays error
                         response.locals.errors.profile = [error.message];
                         response.render('account');
                     });
             } catch(errors) {
+                // Form has failed validation, so returns errors 
                 response.locals.errors.profile = errors;
                 response.render('account');
             }
         } else {
+            // Runs if the user is logout
             this.logout(request, response);
         }
 
     };
-    
-    updatePassword = async (request, response) => {
 
+    /**
+     * Asynchronous function that handles POST form submission to '/password'
+     * On success, redirects to '/account'
+     * Onfailure, redirects to '/account' with error message
+     * Requires the following POST form name fields:
+     * 
+     * @param {string}      request.body.password           password form field
+     * @param {string}      request.body.passwordConfirm    passwordConfirm form field
+     * 
+     * @returns {Object}    response.redirect object
+     */
+    updatePassword = async (request, response) => {
+        // Try to see if form submission is valid
         var currentUser = AraDTUserModel.getCurrentUser();
+        // gets current user information
         if (currentUser) {
             try{
                 await AraDTUserModel.updatePassword(request, response)
                     .then(() => {
+                        // updated password successful, so redirects to account
                         response.locals.errors.password = ['Your password has been updated'];
                         response.render('account');
                     }).catch((error) => {
+                        // updated password not succesfful, so keeps user on account and displays error
                         response.locals.errors.password = [error.message];
                         response.render('account');
                     });
             } catch(errors) {
+                // Form has failed validation, so returns errors
                 response.locals.errors.password = errors;
                 response.render('account');
             }
         } else {
+            // Runs if the user is logout
             this.logout(request, response);
         }
 
