@@ -1,4 +1,4 @@
-// account with only one button
+// old version needs updating
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,13 +14,12 @@
     <span class="align-middle h-100">
         <div class="container-fluid align-items-center h-100">
             <div class="row m-auto p-auto">
-                <div class="m-auto h-100 col-10">
-                    <div class="container-fluid h-100">
-                        <div class="row-6 p-0 m-0">
-                            <div class="container-fluid overflow-auto mb-md-0 w-100 containerLogInLogo">
+                <div class="m-auto p-0 h-100 col-10">
+                        <div class="row p-0 m-0">
+                            <div class="container-fluid mb-md-0 w-100 containerLogInLogo">
                                 <div class="m-0 py-1 px-0 row no-gutters">
                                     <div class="m-0 p-0 col">
-                                        <div class="container-fluid">
+                                        <div class="container-fluid m-0 p-0">
                                             <div class="m-0 p-0 row no-gutters h-100">
                                                 <div class="m-0 p-0 col-3 border border-dark align-items-center d-flex justify-content-center" style= "height: 4vw">
                                                     <p class="m-1">Account</p>
@@ -53,57 +52,45 @@
                                 </div>
                             </div>  
                         </div>
-                        <div class="d-flex">
-
-                            <div class="col-6">
-                                <div class="container-fluid h-100">
-                                    <div class="row p-0 my-2 border border-dark" style="min-height: 7vw;">
-                                        <div class="container-fluid">
-                                            <div class="row p-0 m-2">
-                                                Current Email
-                                            </div>
-                                            <div class="row p-0 m-2">
-                                                <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Current Email" readonly>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row p-0 my-2 border border-dark" style="min-height: 7vw;">
-                                        <div class="container-fluid">
-                                            <div class="row p-0 m-2">
-                                                Current Account Name
-                                            </div>
-                                            <div class="row p-0 m-2">
-                                                <input type="accountName" class="form-control" aria-describedby="emailHelp" placeholder="Current Account Name" readonly>
+                        <form action="/account" method="post" enctype="multipart/form-data"></form>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="container-fluid h-100">
+                                        <div class="row p-0 my-2 border border-dark" style="min-height: 7vw;">
+                                            <div class="container-fluid">
+                                                <div class="row p-0 m-2">
+                                                    Current Email
+                                                </div>
+                                                <div class="row p-0 m-2">
+                                                    <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Current Email" readonly>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row p-0 my-2 border border-dark centre" style="min-height: 7vw;">
-                                        <div class="my-1 p-0 row align-items-center no-gutters w-100">
-                                            <div class="m-0 p-0 col-6 colFriendsList text-center">
-                                                <strong>John Doe</strong>
+                                        <div class="row p-0 my-2 border border-dark" style="min-height: 7vw;">
+                                            <div class="container-fluid">
+                                                <div class="row p-0 m-2">
+                                                    Current Account Name
+                                                </div>
+                                                <div class="row p-0 m-2">
+                                                    <input type="accountName" class="form-control" aria-describedby="emailHelp" placeholder="Current Account Name" readonly>
+                                                </div>
                                             </div>
-                                            <div class="m-0 p-0 col-6 colFriendsList">
-                                                <div class="text-center">
-                                                    <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center" style="max-width: 6vw; max-height: 6vw;">     
-                                                </div> 
-                                            </div>                                                                                   
-                                        </div>  
-                                    </div>
-                                    <div class="row p-0 my-2 border border-dark" style="min-height: 7vw;">
-                                        <div class="container-fluid">
-                                            <div class="row p-0 m-2">
-                                                Old Password
-                                            </div>
-                                            <div class="row p-0 m-2">
-                                                <input type="password" class="form-control" placeholder="Old Password" readonly>
-                                            </div>
+                                        </div>
+                                        <div class="row p-0 my-2 border border-dark centre" style="min-height: 7vw;">
+                                            <div class="my-1 p-0 row align-items-center no-gutters w-100">
+                                                <div class="m-0 p-0 col-6 colFriendsList text-center">
+                                                    <strong>John Doe</strong>
+                                                </div>
+                                                <div class="m-0 p-0 col-6 colFriendsList">
+                                                    <div class="text-center">
+                                                        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center" style="max-width: 6vw; max-height: 6vw;">     
+                                                    </div> 
+                                                </div>                                                                                   
+                                            </div>  
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-6">
-                                <form action="/password" method="post" enctype="multipart/form-data">
-                                <form action="/account" method="post" enctype="multipart/form-data">
+                                <div class="col-6">
                                     <div class="container-fluid h-100">
                                         <div class="row p-0 my-2 border border-dark" style="min-height: 7vw;">
                                             <div class="container-fluid">
@@ -133,16 +120,41 @@
                                                 <div class="row p-0 m-2">
                                                     <div class="input-group">
                                                         <div class="input-group-prepend">
-                                                        <span class="input-group-text py-0" id="inputGroupFileAddon01">Upload</span>
+                                                            <span class="input-group-text py-0" id="inputGroupFileAddon01">Upload</span>
                                                         </div>
                                                         <div class="custom-file">
-                                                        <input name="avatar" type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-                                                        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                                            <input name="avatar" type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                                                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                        </div>  
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row p-0 my-2 border border-dark" style="min-height: 7vw;">
+                                <button type="submit" class="btn btn-light btn-lg btn-outline-dark centre mx-auto p-2 my-2">Change Account Details</button>
+                            </div>
+                        </form>
+                        <form action="/password" method="post" enctype="multipart/form-data"></form>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="container-fluid h-100">
+                                        <div class="row p-0 my-2 border border-dark" style="min-height: 7vw;">
+                                            <div class="container-fluid">
+                                                <div class="row p-0 m-2">
+                                                    Old Password
+                                                </div>
+                                                <div class="row p-0 m-2">
+                                                    <input type="password" class="form-control" placeholder="Old Password" readonly>
+                                                </div>
+                                            </div>
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="container-fluid h-100">
                                         <div class="row p-0 my-2 border border-dark" style="min-height: 7vw;">
                                             <div class="container-fluid">
                                                 <div class="row p-0 m-2">
@@ -163,20 +175,17 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row p-0 my-2 border border-dark" style="min-height: 7vw;">
-                                            <button type="submit" class="btn btn-light btn-lg btn-outline-dark centre mx-auto p-2 my-2">Change Account Details</button>
-                                        </div>
                                     </div>
-                                </form>
-                                </form>
+                                </div>
                             </div>
-                        </div>
-                    </div>                      
+                            <div class="row p-0 my-2 border border-dark" style="min-height: 7vw;">
+                                <button type="submit" class="btn btn-light btn-lg btn-outline-dark centre mx-auto p-2 my-2">Update Password</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-            </div>
-        </div>  
+            </div>                      
+        </div> 
     </span>
 </div><!-- end #main -->
 <%- include('partials/footer'); %>
-
-
