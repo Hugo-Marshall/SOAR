@@ -21,6 +21,8 @@ class UserController{
 
         // Add all routing middleware for user endpoints
         AraDTApp.get('/test', this.test);
+        AraDTApp.get('/editChannel', this.editChannel);
+        AraDTApp.get('/loggedIn', this.loggedIn);
         AraDTApp.get('/register', this.signup);
         AraDTApp.post('/register', this.register);
         AraDTApp.post('/login', this.login);
@@ -33,11 +35,19 @@ class UserController{
     test(request, response, next) {
         response.render('test');
     }
-    
 
     signup(request, response, next) {
         response.render('register');
     }
+
+    loggedIn(request, response, next) {
+        response.render('loggedIn');
+    }
+
+    editChannel(request, response, next) {
+        response.render('editChannel');
+    }
+    
 
     /**
      * Assigns middleware to add Firebase.auth().currentUser to

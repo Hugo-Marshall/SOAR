@@ -37,27 +37,28 @@
                 <div class="col-6 border border-dark minsize-7vw my-2 mx-0">
                     <form action="/account" method="post" enctype="multipart/form-data">
                     <p class="m-2"> Current Email</p> 
-                    <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Current Email" readonly>
+                    <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Current email" value="<%= locals.user.email %>" readonly>
                 </div>
                 <div class="col-6 border border-dark minsize-7vw my-2 mx-0">
                     <p class="m-2"> New Email</p>
-                    <input name="email" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
+                    <input name="email" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email" value="<%= locals.user.email %>" >
                 </div>
                 <div class="col-6 border border-dark minsize-7vw my-2 mx-0">
                     <p class="m-2"> Current Account Name</p> 
-                    <input type="accountName" class="form-control" aria-describedby="emailHelp" placeholder="Current Account Name" readonly>
+                    <input type="accountName" class="form-control" placeholder="Current account name" value="<%= locals.user.displayName %>" readonly>
                 </div>
                 <div class="col-6 border border-dark minsize-7vw my-2 mx-0">
                     <p class="m-2"> New Account Name</p>
-                    <input name="displayName" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter account name">
+                    <input name="displayName" type="text" class="form-control" placeholder="Enter account name" value="<%= locals.user.displayName %>" >
                 </div>
                 <div class="col-6 border border-dark minsize-7vw my-2 mx-0">
                     <div class="row align-items-center h-100">
                         <div class="col-6 text-center">
-                            <strong>John Doe</strong>
+                            <strong><%= locals.user.displayName %></strong>
                         </div>
                         <div class="col-6 text-center">
-                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center minsize-5vw">     
+                            <%= locals.user.avatar %>
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center minsize-5vw">
                         </div>                                                                                   
                     </div>  
                 </div>
@@ -77,6 +78,17 @@
                     <div class="row h-100">
                         <button type="submit" class="btn btn-light btn-lg btn-outline-dark p-2 my-2 m-auto">Change Account Details</button>
                         </form>
+                        <% if (locals.errors && locals.errors.profile) { %>
+                            <div class="container">
+                                <div class="row justify-content-md-center">
+                                    <div class="generic-errors col-6">
+                                        <% locals.errors.profile.forEach(function(error) { %>
+                                            <p class="alert alert-primary" role="alert"><%= error %></p>
+                                        <% }) %>
+                                    </div>
+                                </div>
+                            </div>
+                        <% } %>
                     </div>  
                 </div>
                 <div class="col-6 border border-dark minsize-7vw my-2 mx-0">
@@ -99,6 +111,17 @@
                     <div class="row h-100">
                         <button type="submit" class="btn btn-light btn-lg btn-outline-dark p-2 my-2 m-auto">Update Password</button>
                         </form>
+                        <% if (locals.errors && locals.errors.password) { %>
+                            <div class="container">
+                                <div class="row justify-content-md-center">
+                                    <div class="generic-errors col-6">
+                                        <% locals.errors.password.forEach(function(error) { %>
+                                            <p class="alert alert-primary" role="alert"><%= error %></p>
+                                        <% }) %>
+                                    </div>
+                                </div>
+                            </div>
+                        <% } %>
                     </div>  
                 </div>
             </div>

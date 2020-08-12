@@ -1,4 +1,3 @@
-//old version needs updating
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,431 +9,303 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stylesheets/style.css">
 </head>
-<div id="main">
-    <span class="align-middle">
-        <div class="container-fluid">
-            <div class="m-0 p-1 row no-gutters">
-                <div class="m-0 p-0 col">
-                    <div class="container-fluid">
-                        <div class="m-0 p-0 row no-gutters h-100">
-                            <div class="m-0 p-0 col-3 border border-dark align-items-center d-flex justify-content-center" style= "height: 4vw">
-                                <p class="m-1">Account</p>
-                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="m-1 avatar rounded-circle border border-dark" style="max-width: 3vw; max-height: 3vw;"> 
-                                <a href="account" class="m-1"><i class="fa fa-cog" aria-hidden="true"></i></a>
-                            </div>
-                            <div class="m-auto p-auto col-3 border border-dark align-items-center d-flex justify-content-center" style= "height: 4vw">
-                                <a href="loggedOut">
-                                    Log Out
-                                </a>
-                            </div>
-                            <div class="m-0 p-0 col-3 border border-dark align-items-center d-flex justify-content-center" style= "height: 4vw">
-                                <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Channels
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                    <button class="dropdown-item" type="button"><a href="loggedIn">Channel X</a></button>
-                                    <button class="dropdown-item" type="button"><a href="loggedIn">Channel X</a></button>
-                                    <button class="dropdown-item" type="button"><a href="loggedIn">Channel X</a></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="m-auto p-auto col-3 border border-dark align-items-center d-flex justify-content-center" style= "height: 4vw">
-                                SOAR
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+<div class="container-fluid">
+    <div class="row m-1 no-gutters">
+        <div class="col-3 border border-dark height-4vw">
+            <p class="m-1">Account</p>
+            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="m-1 rounded-circle border border-dark maxsize-3vw"> 
+            <a href="account" class="m-1"><i class="fa fa-cog" aria-hidden="true"></i></a>
+        </div>
+        <a href="/" class="col-3 border border-dark height-4vw">
+            Log Out
+        </a>
+        <div class="dropdown col-3 border border-dark height-4vw">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Channels
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <button class="dropdown-item" type="button"><a href="loggedIn">Channel X</a></button>
+            <button class="dropdown-item" type="button"><a href="loggedIn">Channel X</a></button>
+            <button class="dropdown-item" type="button"><a href="loggedIn">Channel X</a></button>
             </div>
-            <div class="p-1 row row-bottom-margin no-gutters">
-                <div class="col-lg-2 d-lg-block d-none border border-dark">
-                    <div class="container-fluid p-1">
-                        <div class="m-0 p-0 row no-gutters">
-                            <div class="m-0 p-1 col">Friends</div>
+        </div>
+        <div class="col-3 border border-dark height-4vw">
+            SOAR
+        </div>
+        <div class="col-2 col border border-dark p-0">
+            <div class="m-0 p-2 col">
+                <strong>Friends</strong>
+            </div>
+            <div class="row friendsList scrollbar-deep-purple bordered-deep-purple thin m-1">
+                <div class="container-fluid overflow-auto m-0 p-1">
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
                         </div>
-                        <div class="m-0 p-0 row no-gutters">
-                            <div class="m-0 p-0 col">
-                                <div class="card friendsList scrollbar-deep-purple bordered-deep-purple thin">
-                                    <div class="card-body m-0 p-1">
-                                        <div class="container-fluid overflow-auto mb-md-0 w-100 containerFriendList">
-                                            <div class="my-1 p-0 row align-items-center no-gutters border border-primary">
-                                                <div class="m-0 p-0 col colFriendsList">
-                                                    <strong>John Doe</strong>
-                                                </div>
-                                                <div class="m-0 p-0 col colFriendsList">
-                                                    <div class="d-flex flex-row-reverse">
-                                                        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark" style="max-width: 3vw; max-height: 3vw;">     
-                                                    </div> 
-                                                </div>                                                                                   
-                                            </div>  
-                                            <div class="my-1 p-0 row no-gutters align-items-center border border-primary">
-                                                <div class="m-0 p-0 col colFriendsList">
-                                                    <strong>John Doe</strong>
-                                                </div>
-                                                <div class="m-0 p-0 col colFriendsList">
-                                                    <div class="d-flex flex-row-reverse">
-                                                        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark" style="max-width: 3vw; max-height: 3vw;">     
-                                                    </div> 
-                                                </div>                                                                                   
-                                            </div>
-                                            <div class="my-1 p-0 row no-gutters align-items-center border border-primary">
-                                                <div class="m-0 p-0 col colFriendsList">
-                                                    <strong>John Doe</strong>
-                                                </div>
-                                                <div class="m-0 p-0 col colFriendsList">
-                                                    <div class="d-flex flex-row-reverse">
-                                                        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark" style="max-width: 3vw; max-height: 3vw;">     
-                                                    </div> 
-                                                </div>                                                                                   
-                                            </div>
-                                            <div class="my-1 p-0 row no-gutters align-items-center border border-primary">
-                                                <div class="m-0 p-0 col colFriendsList">
-                                                    <strong>John Doe</strong>
-                                                </div>
-                                                <div class="m-0 p-0 col colFriendsList">
-                                                    <div class="d-flex flex-row-reverse">
-                                                        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark" style="max-width: 3vw; max-height: 3vw;">     
-                                                    </div> 
-                                                </div>                                                                                   
-                                            </div>
-                                            <div class="my-1 p-0 row no-gutters align-items-center border border-primary">
-                                                <div class="m-0 p-0 col colFriendsList">
-                                                    <strong>John Doe</strong>
-                                                </div>
-                                                <div class="m-0 p-0 col colFriendsList">
-                                                    <div class="d-flex flex-row-reverse">
-                                                        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark" style="max-width: 3vw; max-height: 3vw;">     
-                                                    </div> 
-                                                </div>                                                                                   
-                                            </div>
-                                            <div class="my-1 p-0 row no-gutters align-items-center border border-primary">
-                                                <div class="m-0 p-0 col colFriendsList">
-                                                    <strong>John Doe</strong>
-                                                </div>
-                                                <div class="m-0 p-0 col colFriendsList">
-                                                    <div class="d-flex flex-row-reverse">
-                                                        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark" style="max-width: 3vw; max-height: 3vw;">     
-                                                    </div> 
-                                                </div>                                                                                   
-                                            </div>
-                                            <div class="my-1 p-0 row no-gutters align-items-center border border-primary">
-                                                <div class="m-0 p-0 col colFriendsList">
-                                                    <strong>John Doe</strong>
-                                                </div>
-                                                <div class="m-0 p-0 col colFriendsList">
-                                                    <div class="d-flex flex-row-reverse">
-                                                        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark" style="max-width: 3vw; max-height: 3vw;">     
-                                                    </div> 
-                                                </div>                                                                                   
-                                            </div>
-                                            <div class="my-1 p-0 row no-gutters align-items-center border border-primary">
-                                                <div class="m-0 p-0 col colFriendsList">
-                                                    <strong>John Doe</strong>
-                                                </div>
-                                                <div class="m-0 p-0 col colFriendsList">
-                                                    <div class="d-flex flex-row-reverse">
-                                                        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark" style="max-width: 3vw; max-height: 3vw;">     
-                                                    </div> 
-                                                </div>                                                                                   
-                                            </div>
-                                            <div class="my-1 p-0 row no-gutters align-items-center border border-primary">
-                                                <div class="m-0 p-0 col colFriendsList">
-                                                    <strong>John Doe</strong>
-                                                </div>
-                                                <div class="m-0 p-0 col colFriendsList">
-                                                    <div class="d-flex flex-row-reverse">
-                                                        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark" style="max-width: 3vw; max-height: 3vw;">     
-                                                    </div> 
-                                                </div>                                                                                   
-                                            </div>
-                                            <div class="my-1 p-0 row no-gutters align-items-center border border-primary">
-                                                <div class="m-0 p-0 col colFriendsList">
-                                                    <strong>John Doe</strong>
-                                                </div>
-                                                <div class="m-0 p-0 col colFriendsList">
-                                                    <div class="d-flex flex-row-reverse">
-                                                        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark" style="max-width: 3vw; max-height: 3vw;">     
-                                                    </div> 
-                                                </div>                                                                                   
-                                            </div>                                       
-                                        </div>    
-                                    </div>                                               
-                                </div>                                                                                              
-                            </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div>  
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
                         </div>
-                    </div>
-                    <div class="m-0 p-1 row no-gutters">
-                        <div class="m-0 p-0 col">
-                            <a href="addFriend">Add Friend</a>
-                            <a href="addFriend"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
                         </div>
-                    </div>
-                    <div class="m-0 p-1 row no-gutters">
-                        <div class="m-0 p-0 col">
-                            <a href="editChannel">Channels</a>
-                            <a href="editChannel"><i class="fa fa-cog" aria-hidden="true"></i></a>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
                         </div>
-                    </div>
-                    <div class="m-0 p-1 row no-gutters">
-                        <div class="m-0 p-0 col">
-                            <div class="card channelList scrollbar-deep-purple bordered-deep-purple thin">
-                                <div class="card-body m-0 p-0">
-                                    <div class="container-fluid overflow-auto mb-md-0 w-100 containerChannelList">
-                                        <div class="my-1 p-0 row align-items-center no-gutters border border-primary">
-                                            <div class="col m-auto p-auto col colChannelList align-items-center">                                          
-                                            <strong>Channel X</strong>  
-                                            </div>                                                                                                                          
-                                        </div>                                                                           
-                                    </div>   
-                                    <div class="container-fluid overflow-auto mb-md-0 w-100 containerChannelList">
-                                        <div class="my-1 p-0 row align-items-center no-gutters border border-primary">
-                                            <div class="col m-auto p-auto col colChannelList align-items-center">                                          
-                                            <strong>Channel X</strong>  
-                                            </div>                                                                                                                          
-                                        </div>                                                                           
-                                    </div>
-                                    <div class="container-fluid overflow-auto mb-md-0 w-100 containerChannelList">
-                                        <div class="my-1 p-0 row align-items-center no-gutters border border-primary">
-                                            <div class="col m-auto p-auto col colChannelList align-items-center">                                          
-                                            <strong>Channel X</strong>  
-                                            </div>                                                                                                                          
-                                        </div>                                                                           
-                                    </div> 
-                                    <div class="container-fluid overflow-auto mb-md-0 w-100 containerChannelList">
-                                        <div class="my-1 p-0 row align-items-center no-gutters border border-primary">
-                                            <div class="col m-auto p-auto col colChannelList align-items-center">                                          
-                                            <strong>Channel X</strong>  
-                                            </div>                                                                                                                          
-                                        </div>                                                                           
-                                    </div>   
-                                    <div class="container-fluid overflow-auto mb-md-0 w-100 containerChannelList">
-                                        <div class="my-1 p-0 row align-items-center no-gutters border border-primary">
-                                            <div class="col m-auto p-auto col colChannelList align-items-center">                                          
-                                            <strong>Channel X</strong>  
-                                            </div>                                                                                                                          
-                                        </div>                                                                           
-                                    </div>
-                                    <div class="container-fluid overflow-auto mb-md-0 w-100 containerChannelList">
-                                        <div class="my-1 p-0 row align-items-center no-gutters border border-primary">
-                                            <div class="col m-auto p-auto col colChannelList align-items-center">                                          
-                                            <strong>Channel X</strong>  
-                                            </div>                                                                                                                          
-                                        </div>                                                                           
-                                    </div> 
-                                    <div class="container-fluid overflow-auto mb-md-0 w-100 containerChannelList">
-                                        <div class="my-1 p-0 row align-items-center no-gutters border border-primary">
-                                            <div class="col m-auto p-auto col colChannelList align-items-center">                                          
-                                            <strong>Channel X</strong>  
-                                            </div>                                                                                                                          
-                                        </div>                                                                           
-                                    </div>   
-                                    <div class="container-fluid overflow-auto mb-md-0 w-100 containerChannelList">
-                                        <div class="my-1 p-0 row align-items-center no-gutters border border-primary">
-                                            <div class="col m-auto p-auto col colChannelList align-items-center">                                          
-                                            <strong>Channel X</strong>  
-                                            </div>                                                                                                                          
-                                        </div>                                                                           
-                                    </div>
-                                    <div class="container-fluid overflow-auto mb-md-0 w-100 containerChannelList">
-                                        <div class="my-1 p-0 row align-items-center no-gutters border border-primary">
-                                            <div class="col m-auto p-auto col colChannelList align-items-center">                                          
-                                            <strong>Channel X</strong>  
-                                            </div>                                                                                                                          
-                                        </div>                                                                           
-                                    </div> 
-                                    <div class="container-fluid overflow-auto mb-md-0 w-100 containerChannelList">
-                                        <div class="my-1 p-0 row align-items-center no-gutters border border-primary">
-                                            <div class="col m-auto p-auto col colChannelList align-items-center">                                          
-                                            <strong>Channel X</strong>  
-                                            </div>                                                                                                                          
-                                        </div>                                                                           
-                                    </div>   
-                                    <div class="container-fluid overflow-auto mb-md-0 w-100 containerChannelList">
-                                        <div class="my-1 p-0 row align-items-center no-gutters border border-primary">
-                                            <div class="col m-auto p-auto col colChannelList align-items-center">                                          
-                                            <strong>Channel X</strong>  
-                                            </div>                                                                                                                          
-                                        </div>                                                                           
-                                    </div>
-                                    <div class="container-fluid overflow-auto mb-md-0 w-100 containerChannelList">
-                                        <div class="my-1 p-0 row align-items-center no-gutters border border-primary">
-                                            <div class="col m-auto p-auto col colChannelList align-items-center">                                          
-                                            <strong>Channel X</strong>  
-                                            </div>                                                                                                                          
-                                        </div>                                                                           
-                                    </div> 
-                                </div>                                               
-                            </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
                         </div>
-                    </div>
-                    <div class="m-0 p-1 row no-gutters">
-                        <div class="m-0 p-0 col">
-                            <a href="addChannel">Create Channel</a>
-                            <a href="addChannel"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
                         </div>
-                    </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                    <div class="my-1 row align-items-center no-gutters border border-primary">
+                        <div class="p-0 col">
+                            <strong>John Doe</strong>
+                        </div>
+                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
+                        </div>                                                                                   
+                    </div> 
+                </div>                                                 
+            </div>
+            <div class="m-0 p-2 col">
+                <a href="addFriend">Add Friend</a>
+                <a href="addFriend"><i class="fa fa-plus" aria-hidden="true"></i></a>
+            </div>
+            <div class="m-0 p-2 col">
+                <a href="editChannel">Channels</a>
+                <a href="editChannel"><i class="fa fa-cog" aria-hidden="true"></i></a>
+            </div>
+            <div class="row channelList scrollbar-deep-purple bordered-deep-purple thin m-1">
+                <div class="container-fluid overflow-auto m-0 p-1">
+                    <div class="col border border-primary">Channel X</div>
+                    <div class="col border border-primary">Channel X</div>
+                    <div class="col border border-primary">Channel X</div>
+                    <div class="col border border-primary">Channel X</div>
+                    <div class="col border border-primary">Channel X</div>
+                    <div class="col border border-primary">Channel X</div>
+                    <div class="col border border-primary">Channel X</div>
+                    <div class="col border border-primary">Channel X</div>
+                    <div class="col border border-primary">Channel X</div>
+                </div>                                                  
+            </div>
+            <div class="m-0 p-2 col">
+                <a href="addChannel">Create Channel</a>
+                <a href="addChannel"><i class="fa fa-plus" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="col-lg-10 col-md-12">
+            <div class="container-fluid">
+                <div class="col border border-dark mx-1 mb-2 p-1">
+                    Channels
                 </div>
-                <div class="col-lg-10 col-md-12">
-                    <div class="container-fluid">
-                        <div class="row border border-dark mx-1 my-2 p-1">
-                            Channels
-                        </div>
-                        <div class="p-2 my-2 mx-1 row border border-dark">
-                            <div class="m-0 p-0 col">
-                                <strong>Channel X</strong>
-                            </div>
-                            <div class="m-0 px-1 py-0 col">
-                                <div class="d-flex flex-row-reverse">    
-                                    <a href="deleteChannel"><i class="fas fa-trash-alt"></i></a>
-                                    <a href="editChannel"><i class="fas fa-edit"></i></a>
-                                </div> 
-                            </div>                                                                                   
-                        </div>
-                        <div class="p-2 my-2 mx-1 row border border-dark">
-                            <div class="m-0 p-0 col">
-                                <strong>Channel X</strong>
-                            </div>
-                            <div class="m-0 px-1 py-0 col">
-                                <div class="d-flex flex-row-reverse">    
-                                    <a href="deleteChannel"><i class="fas fa-trash-alt"></i></a>
-                                    <a href="editChannel"><i class="fas fa-edit"></i></a>
-                                </div> 
-                            </div>                                                                                   
-                        </div>
-                        <div class="p-2 my-2 mx-1 row border border-dark">
-                            <div class="m-0 p-0 col">
-                                <strong>Channel X</strong>
-                            </div>
-                            <div class="m-0 px-1 py-0 col">
-                                <div class="d-flex flex-row-reverse">    
-                                    <a href="deleteChannel"><i class="fas fa-trash-alt"></i></a>
-                                    <a href="editChannel"><i class="fas fa-edit"></i></a>
-                                </div> 
-                            </div>                                                                                   
-                        </div>
-                        <div class="p-2 my-2 mx-1 row border border-dark">
-                            <div class="m-0 p-0 col">
-                                <strong>Channel X</strong>
-                            </div>
-                            <div class="m-0 px-1 py-0 col">
-                                <div class="d-flex flex-row-reverse">    
-                                    <a href="deleteChannel"><i class="fas fa-trash-alt"></i></a>
-                                    <a href="editChannel"><i class="fas fa-edit"></i></a>
-                                </div> 
-                            </div>                                                                                   
-                        </div>
-                        <div class="row border border-dark mx-1 my-2 p-1">
-                            Edit A Channel
-                        </div>
-                        <div class="row p-0 m-0">
-                            <div class="my-1 p-0 row align-items-center no-gutters w-100">
-                                <div class="m-0 p-0 col-6 colFriendsList text-center">
-                                    <div class="row m-0 py-2 px-1">
-                                        New Channel Name
-                                    </div>
-                                    <div class="row m-0 py-0 px-1">
-                                        <input type="channelName" class="form-control" aria-describedby="emailHelp" placeholder="Enter new channel name">
-                                    </div>
-                                    <div class="row m-0 py-2 px-1">
-                                        New Avatar
-                                    </div>
-                                    <div class="row m-0 py-0 px-1">
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                              <span class="input-group-text py-0" id="inputGroupFileAddon01">Upload</span>
-                                            </div>
-                                            <div class="custom-file">
-                                              <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-                                              <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="m-0 p-0 col-6 colFriendsList">
-                                    <div class="text-center">
-                                        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark text-center newAvatarImage">     
-                                    </div> 
-                                </div>                                                                                   
-                            </div>  
-                        </div>
-                        <div class="row m-0 px-1 py-2">
-                            Add Users
-                        </div>
-                        <div id="add-user" class="row m-0 p-0 row-horizon d-flex flex-row flex-nowrap scrolling-wrapper">
-                            <div class="add-user col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                                <div class="container">
-                                    <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center image">
-                                    <div class="middle">
-                                        <div class="text">
-                                            <h3><i id="add-user-plus" class="fa fa-plus" aria-hidden="true"></i></h3>
-                                         </div>
-                                    </div>
-                                </div>
-                                <p>Joe Doe</p> 
-                            </div>   
-                            <div class="add-user col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                                <div class="container">
-                                    <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center image">
-                                    <div class="middle">
-                                        <div class="text">
-                                            <h3><i id="add-user-plus" class="fa fa-plus" aria-hidden="true"></i></h3>
-                                         </div>
-                                    </div>
-                                </div>
-                                <p>Joe Doe</p> 
-                            </div>   
-                            <div class="add-user col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                                <div class="container">
-                                    <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center image">
-                                    <div class="middle">
-                                        <div class="text">
-                                            <h3><i id="add-user-plus" class="fa fa-plus" aria-hidden="true"></i></h3>
-                                         </div>
-                                    </div>
-                                </div>
-                                <p>Joe Doe</p> 
-                            </div>   
-                            <div class="add-user col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                                <div class="container">
-                                    <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center image">
-                                    <div class="middle">
-                                        <div class="text">
-                                            <h3><i id="add-user-plus" class="fa fa-plus" aria-hidden="true"></i></h3>
-                                         </div>
-                                    </div>
-                                </div>
-                                <p>Joe Doe</p> 
-                            </div>   
-                            <div class="add-user col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                                <div class="container">
-                                    <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center image">
-                                    <div class="middle">
-                                        <div class="text">
-                                            <h3><i id="add-user-plus" class="fa fa-plus" aria-hidden="true"></i></h3>
-                                         </div>
-                                    </div>
-                                </div>
-                                <p>Joe Doe</p> 
-                            </div>   
-                            <div class="add-user col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                                <div class="container">
-                                    <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center image">
-                                    <div class="middle">
-                                        <div class="text">
-                                            <h3><i id="add-user-plus" class="fa fa-plus" aria-hidden="true"></i></h3>
-                                         </div>
-                                    </div>
-                                </div>
-                                <p>Joe Doe</p> 
-                            </div>   
-                        </div>
-                        <div class="row m-0 p-0 align-items-center d-flex justify-content-center">
-                            <div class="div border-dark border text-center p-2">Update</div>
-                        </div>
+                <div class="p-2 my-2 mx-1 row border border-dark">
+                    <div class="m-0 p-0 col">
+                        <strong>Channel X</strong>
                     </div>
+                    <div class="m-0 px-1 py-0 col">
+                        <div class="d-flex flex-row-reverse">    
+                            <a href="deleteChannel"><i class="fas fa-trash-alt"></i></a>
+                            <a href="editChannel"><i class="fas fa-edit"></i></a>
+                        </div> 
+                    </div>                                                                                   
+                </div>
+                <div class="p-2 my-2 mx-1 row border border-dark">
+                    <div class="m-0 p-0 col">
+                        <strong>Channel X</strong>
+                    </div>
+                    <div class="m-0 px-1 py-0 col">
+                        <div class="d-flex flex-row-reverse">    
+                            <a href="deleteChannel"><i class="fas fa-trash-alt"></i></a>
+                            <a href="editChannel"><i class="fas fa-edit"></i></a>
+                        </div> 
+                    </div>                                                                                   
+                </div>
+                <div class="p-2 my-2 mx-1 row border border-dark">
+                    <div class="m-0 p-0 col">
+                        <strong>Channel X</strong>
+                    </div>
+                    <div class="m-0 px-1 py-0 col">
+                        <div class="d-flex flex-row-reverse">    
+                            <a href="deleteChannel"><i class="fas fa-trash-alt"></i></a>
+                            <a href="editChannel"><i class="fas fa-edit"></i></a>
+                        </div> 
+                    </div>                                                                                   
+                </div>
+                <div class="p-2 my-2 mx-1 row border border-dark">
+                    <div class="m-0 p-0 col">
+                        <strong>Channel X</strong>
+                    </div>
+                    <div class="m-0 px-1 py-0 col">
+                        <div class="d-flex flex-row-reverse">    
+                            <a href="deleteChannel"><i class="fas fa-trash-alt"></i></a>
+                            <a href="editChannel"><i class="fas fa-edit"></i></a>
+                        </div> 
+                    </div>                                                                                   
+                </div>
+                <div class="row border border-dark mx-1 my-2 p-1">
+                    Edit A Channel
+                </div>
+                <div class="row p-0 m-0">
+                    <div class="my-1 p-0 row align-items-center no-gutters w-100">
+                        <div class="m-0 p-0 col-6 colFriendsList text-center">
+                            <div class="row m-0 py-2 px-1">
+                                New Channel Name
+                            </div>
+                            <div class="row m-0 py-0 px-1">
+                                <input type="channelName" class="form-control" aria-describedby="emailHelp" placeholder="Enter new channel name">
+                            </div>
+                            <div class="row m-0 py-2 px-1">
+                                New Avatar
+                            </div>
+                            <div class="row m-0 py-0 px-1">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text py-0" id="inputGroupFileAddon01">Upload</span>
+                                    </div>
+                                    <div class="custom-file">
+                                      <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                                      <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-0 p-0 col-6 colFriendsList">
+                            <div class="text-center">
+                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark text-center newAvatarImage">     
+                            </div> 
+                        </div>                                                                                   
+                    </div>  
+                </div>
+                <div class="row m-0 px-1 py-2">
+                    Add Users
+                </div>
+                <div id="add-user" class="row m-0 p-0 row-horizon d-flex flex-row flex-nowrap scrolling-wrapper">
+                    <div class="add-user col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                        <div class="container">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center image">
+                            <div class="middle">
+                                <div class="text">
+                                    <h3><i id="add-user-plus" class="fa fa-plus" aria-hidden="true"></i></h3>
+                                 </div>
+                            </div>
+                        </div>
+                        <p>Joe Doe</p> 
+                    </div>   
+                    <div class="add-user col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                        <div class="container">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center image">
+                            <div class="middle">
+                                <div class="text">
+                                    <h3><i id="add-user-plus" class="fa fa-plus" aria-hidden="true"></i></h3>
+                                 </div>
+                            </div>
+                        </div>
+                        <p>Joe Doe</p> 
+                    </div>   
+                    <div class="add-user col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                        <div class="container">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center image">
+                            <div class="middle">
+                                <div class="text">
+                                    <h3><i id="add-user-plus" class="fa fa-plus" aria-hidden="true"></i></h3>
+                                 </div>
+                            </div>
+                        </div>
+                        <p>Joe Doe</p> 
+                    </div>   
+                    <div class="add-user col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                        <div class="container">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center image">
+                            <div class="middle">
+                                <div class="text">
+                                    <h3><i id="add-user-plus" class="fa fa-plus" aria-hidden="true"></i></h3>
+                                 </div>
+                            </div>
+                        </div>
+                        <p>Joe Doe</p> 
+                    </div>   
+                    <div class="add-user col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                        <div class="container">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center image">
+                            <div class="middle">
+                                <div class="text">
+                                    <h3><i id="add-user-plus" class="fa fa-plus" aria-hidden="true"></i></h3>
+                                 </div>
+                            </div>
+                        </div>
+                        <p>Joe Doe</p> 
+                    </div>   
+                    <div class="add-user col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                        <div class="container">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center image">
+                            <div class="middle">
+                                <div class="text">
+                                    <h3><i id="add-user-plus" class="fa fa-plus" aria-hidden="true"></i></h3>
+                                 </div>
+                            </div>
+                        </div>
+                        <p>Joe Doe</p> 
+                    </div>   
+                </div>
+                <div class="row m-0 p-0 align-items-center d-flex justify-content-center">
+                    <div class="div border-dark border text-center p-2">Update</div>
                 </div>
             </div>
         </div>
-    </span>
-  </div><!-- end #main -->
-  <%- include('partials/footer'); %>
+    </div>
+</div>
+<%- include('partials/footer'); %>
