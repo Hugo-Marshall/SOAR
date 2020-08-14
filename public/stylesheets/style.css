@@ -195,3 +195,7 @@ height: 275px; }
   min-width: 12vw;
   min-height: 12vw;
 }
+
+#textcentre {
+  text-align: center;
+}

@@ -78,19 +78,20 @@
                     <div class="row h-100">
                         <button type="submit" class="btn btn-light btn-lg btn-outline-dark p-2 my-2 m-auto">Change Account Details</button>
                         </form>
-                        <% if (locals.errors && locals.errors.profile) { %>
-                            <div class="container">
-                                <div class="row justify-content-md-center">
-                                    <div class="generic-errors col-6">
-                                        <% locals.errors.profile.forEach(function(error) { %>
-                                            <p class="alert alert-primary" role="alert"><%= error %></p>
-                                        <% }) %>
-                                    </div>
-                                </div>
-                            </div>
-                        <% } %>
                     </div>  
                 </div>
+                <% if (locals.errors && locals.errors.profile) { %>
+                    <div class="row justify-content-md-center col-12 p-0 m-0">
+                        <% locals.errors.profile.forEach(function(error) { %>
+                            <div class="col-12 div alert alert-primary m-2 py-3 alert-dismissible fade show border-dark border" id="textcentre" role="alert">
+                                <p class="mb-0"><%= error %></p>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        <% }) %>
+                    </div>
+                <% } %>
                 <div class="col-6 border border-dark minsize-7vw my-2 mx-0">
                     <form action="/password" method="post" enctype="multipart/form-data">
                     <p class="m-2"> Old Password</p>
@@ -111,19 +112,20 @@
                     <div class="row h-100">
                         <button type="submit" class="btn btn-light btn-lg btn-outline-dark p-2 my-2 m-auto">Update Password</button>
                         </form>
-                        <% if (locals.errors && locals.errors.password) { %>
-                            <div class="container">
-                                <div class="row justify-content-md-center">
-                                    <div class="generic-errors col-6">
-                                        <% locals.errors.password.forEach(function(error) { %>
-                                            <p class="alert alert-primary" role="alert"><%= error %></p>
-                                        <% }) %>
-                                    </div>
-                                </div>
-                            </div>
-                        <% } %>
                     </div>  
                 </div>
+                <% if (locals.errors && locals.errors.password) { %>
+                    <div class="row justify-content-md-center col-12 p-0 m-0">
+                        <% locals.errors.password.forEach(function(error) { %>
+                            <div class="col-12 div alert alert-primary m-2 py-3 alert-dismissible fade show border-dark border" id="textcentre" role="alert">
+                                <p class="mb-0"><%= error %></p>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        <% }) %>
+                    </div>
+                <% } %>
             </div>
         </div>
     </div>
