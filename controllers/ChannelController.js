@@ -51,14 +51,12 @@ class ChannelController{
         if (!request.session.token) {
            response.redirect('/');
         }
-
-        var errors = request.session.channels;
         
         try{
             await this.fetchChannelData(request, response, next);
             await this.fetchEditChannelData(request, response, next);
         } catch(error) {
-            errors.general = [error.message];
+            response.locals.errors.general = [error.message];
         }
 
         response.render('channels');

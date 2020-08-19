@@ -54,9 +54,9 @@ var Validator = require('./classes/Validator');
 AraDTValidator = new Validator();
 var UserModel = require('./models/UserModel');
 AraDTUserModel = new UserModel();
-var Router = require('./classes/Router');
-AraDTRouter = new Router();
 var ChannelModel = require('./models/ChannelModel');
 AraDTChannelModel = new ChannelModel();
+var Router = require('./classes/Router');
+AraDTRouter = new Router();
 
 module.exports = AraDTApp;

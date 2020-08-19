@@ -196,116 +196,170 @@
                         </div> 
                     </div>                                                                                   
                 </div>
-                <div class="row border border-dark mx-1 my-2 p-1">
-                    Create A Channel
-                </div>
-                <div class="row p-0 m-0">
-                    <div class="my-1 p-0 row align-items-center no-gutters w-100">
-                        <div class="m-0 p-0 col-6 colFriendsList text-center">
-                            <div class="row m-0 py-2 px-1">
-                                Channel Name
-                            </div>
-                            <div class="row m-0 py-0 px-1">
-                                <input type="channelName" class="form-control" aria-describedby="emailHelp" placeholder="Enter new channel name">
-                            </div>
-                            <div class="row m-0 py-2 px-1">
-                                Avatar
-                            </div>
-                            <div class="row m-0 py-0 px-1">
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                      <span class="input-group-text py-0" id="inputGroupFileAddon01">Upload</span>
-                                    </div>
-                                    <div class="custom-file">
-                                      <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-                                      <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                <% var users = locals.channels.users %>
+                <form id="channel-create-form" action="/channels/add" method="post" enctype="multipart/form-data">
+                    <div class="row border border-dark mx-1 my-2 p-1">
+                        Create A Channel
+                    </div>
+                    <div class="row p-0 m-0">
+                        <div class="my-1 p-0 row align-items-center no-gutters w-100">
+                            <div class="m-0 p-0 col-6 colFriendsList text-center">
+                                <div class="row m-0 py-2 px-1">
+                                    Channel Name
+                                </div>
+                                <div class="row m-0 py-0 px-1">
+                                    <input type="text" class="form-control" name="name" placeholder="Enter channel name" value="">
+                                </div>
+                                <div class="row m-0 py-2 px-1">
+                                    Avatar
+                                </div>
+                                <div class="row m-0 py-0 px-1">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                        <span class="input-group-text py-0" id="inputGroupFileAddon01">Upload</span>
+                                        </div>
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" name="avatar" id="avatar-upload">
+                                        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="m-0 p-0 col-6 colFriendsList">
-                            <div class="text-center">
-                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark text-center newAvatarImage">     
-                            </div> 
-                        </div>                                                                                   
-                    </div>  
-                </div>
-                <div class="row m-0 px-1 py-2">
-                    Add Users
-                </div>
-                <div id="add-user" class="row m-0 p-0 row-horizon d-flex flex-row flex-nowrap scrolling-wrapper">
-                    <div class="add-user col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                        <div class="container">
-                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center image">
-                            <div class="middle">
-                                <div class="text">
-                                    <h3><i id="add-user-plus" class="fa fa-plus" aria-hidden="true"></i></h3>
-                                 </div>
+                            <div class="m-0 p-0 col-6 colFriendsList">
+                                <div class="text-center">
+                                    <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark text-center newAvatarImage">     
+                                </div> 
+                            </div>                                                                                   
+                        </div>  
+                    </div>
+                    <div class="row m-0 px-1 py-2">
+                        Add Users
+                    </div>
+                    <div id="add-user" class="row m-0 p-0 row-horizon d-flex flex-row flex-nowrap scrolling-wrapper">
+                        <div class="add-user col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                            <div class="container">
+                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center image">
+                                <div class="middle">
+                                    <div class="text">
+                                        <h3><i id="add-user-plus" class="fa fa-plus" aria-hidden="true"></i></h3>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <p>Joe Doe</p> 
-                    </div>   
-                    <div class="add-user col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                        <div class="container">
-                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center image">
-                            <div class="middle">
-                                <div class="text">
-                                    <h3><i id="add-user-plus" class="fa fa-plus" aria-hidden="true"></i></h3>
-                                 </div>
+                            <p>Joe Doe</p> 
+                        </div>   
+                        <div class="add-user col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                            <div class="container">
+                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center image">
+                                <div class="middle">
+                                    <div class="text">
+                                        <h3><i id="add-user-plus" class="fa fa-plus" aria-hidden="true"></i></h3>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <p>Joe Doe</p> 
-                    </div>   
-                    <div class="add-user col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                        <div class="container">
-                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center image">
-                            <div class="middle">
-                                <div class="text">
-                                    <h3><i id="add-user-plus" class="fa fa-plus" aria-hidden="true"></i></h3>
-                                 </div>
+                            <p>Joe Doe</p> 
+                        </div>   
+                        <div class="add-user col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                            <div class="container">
+                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center image">
+                                <div class="middle">
+                                    <div class="text">
+                                        <h3><i id="add-user-plus" class="fa fa-plus" aria-hidden="true"></i></h3>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <p>Joe Doe</p> 
-                    </div>   
-                    <div class="add-user col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                        <div class="container">
-                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center image">
-                            <div class="middle">
-                                <div class="text">
-                                    <h3><i id="add-user-plus" class="fa fa-plus" aria-hidden="true"></i></h3>
-                                 </div>
+                            <p>Joe Doe</p> 
+                        </div>   
+                        <div class="add-user col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                            <div class="container">
+                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center image">
+                                <div class="middle">
+                                    <div class="text">
+                                        <h3><i id="add-user-plus" class="fa fa-plus" aria-hidden="true"></i></h3>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <p>Joe Doe</p> 
-                    </div>   
-                    <div class="add-user col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                        <div class="container">
-                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center image">
-                            <div class="middle">
-                                <div class="text">
-                                    <h3><i id="add-user-plus" class="fa fa-plus" aria-hidden="true"></i></h3>
-                                 </div>
+                            <p>Joe Doe</p> 
+                        </div>   
+                        <div class="add-user col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                            <div class="container">
+                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center image">
+                                <div class="middle">
+                                    <div class="text">
+                                        <h3><i id="add-user-plus" class="fa fa-plus" aria-hidden="true"></i></h3>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <p>Joe Doe</p> 
-                    </div>   
-                    <div class="add-user col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                        <div class="container">
-                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center image">
-                            <div class="middle">
-                                <div class="text">
-                                    <h3><i id="add-user-plus" class="fa fa-plus" aria-hidden="true"></i></h3>
-                                 </div>
+                            <p>Joe Doe</p> 
+                        </div>   
+                        <div class="add-user col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                            <div class="container">
+                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center image">
+                                <div class="middle">
+                                    <div class="text">
+                                        <h3><i id="add-user-plus" class="fa fa-plus" aria-hidden="true"></i></h3>
+                                    </div>
+                                </div>
                             </div>
+                            <p>Joe Doe</p> 
+                        </div>   
+                    </div>
+                    <% if (users) { %>
+                        <% users.forEach(function(user) { %>
+                            <input class="user-check-input" id="user<%= user.id %>" type="checkbox" name="users" value="<%= user.id %>">
+                            <p><%= user.name %></p>
+                        <% }) %>
+                    <% } %>
+                    <div class="row m-0 p-0 align-items-center d-flex justify-content-center">
+                        <button class="div border-dark border text-center p-2" id="update" type="submit">Create</button>
+                    </div>
+                    <% if (locals.errors && locals.errors.login) { %>
+                        <div class="row justify-content-md-center col-12 p-0 m-0">
+                            <% locals.errors.login.forEach(function(error) { %>
+                                <div class="col-12 div alert alert-primary m-2 py-3 alert-dismissible fade show border-dark border" id="textcentre" role="alert">
+                                    <p class="mb-0"><%= error %></p>
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            <% }) %>
                         </div>
-                        <p>Joe Doe</p> 
-                    </div>   
-                </div>
-                <div class="row m-0 p-0 align-items-center d-flex justify-content-center">
-                    <div class="div border-dark border text-center p-2">Update</div>
-                </div>
+                    <% } %>
+                </form>
             </div>
         </div>
     </div>
 </div>
+<% 
+var channels = locals.channels
+var owned = ("owned" in  channels) ? channels.owned : false
+var subscribed = ("subscribed" in  channels) ? channels.subscribed : false
+%>
+<div id="owned-channels" class="user-channels">
+	<h4>Your Channels</h4>
+<% if (owned) { %>
+	<ul>
+	<% owned.forEach(function(channel) { %>
+		<li>
+			<img src="<%= channel.image %>" alt="<%= channel.name %>">
+			<a href="/channel/<%= channel.id %>/"><%= channel.name %></a>
+			<a href="/channels/delete/<%= channel.id %>/"><i class="fa fa-trash" aria-hidden="true"></i></a>
+		</li>
+	<% }) %>
+	</ul>
+<% }  %>
+</div>
+<div id="subscribed-channels" >
+	<h4>Subscribed Channels</h4>
+<% if (subscribed) { %>
+	<ul>
+	<% subscribed.forEach(function(channel) { %>
+		<li>
+			<img src="<%= channel.image %>" alt="<%= channel.name %>">
+			<a href="/channel/<%= channel.slug %>/"><%= channel.name %></a>
+		</li>
+	<% }) %>
+	</ul>
+<% }  %>
+</div>
+<%- include('partials/footer'); %>
 
