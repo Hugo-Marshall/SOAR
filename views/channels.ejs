@@ -149,18 +149,89 @@
         </div>
         <div class="col-lg-10 col-md-12">
             <div class="container-fluid">
-                <div class="col m-0 p-0">
-                    <p>Add Friends</p>
+                <div class="col border border-dark mx-1 mb-2 p-1">
+                    Channels
                 </div>
-                <div class="col m-0 p-0">
-                    <p>Search for Friends</p>
+                <div class="p-2 my-2 mx-1 row border border-dark">
+                    <div class="m-0 p-0 col">
+                        <strong>Channel X</strong>
+                    </div>
+                    <div class="m-0 px-1 py-0 col">
+                        <div class="d-flex flex-row-reverse">    
+                            <a href="deleteChannel"><i class="fas fa-trash-alt"></i></a>
+                            <a href="editChannel"><i class="fas fa-edit"></i></a>
+                        </div> 
+                    </div>                                                                                   
                 </div>
-                <div class="col m-0 p-0">
-                    <!-- Search form -->
-                    <form class="form-inline d-flex justify-content-center md-form form-sm">
-                        <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search" aria-label="Search">
-                        <i class="fas fa-search" aria-hidden="true"></i>
-                    </form>
+                <div class="p-2 my-2 mx-1 row border border-dark">
+                    <div class="m-0 p-0 col">
+                        <strong>Channel X</strong>
+                    </div>
+                    <div class="m-0 px-1 py-0 col">
+                        <div class="d-flex flex-row-reverse">    
+                            <a href="deleteChannel"><i class="fas fa-trash-alt"></i></a>
+                            <a href="editChannel"><i class="fas fa-edit"></i></a>
+                        </div> 
+                    </div>                                                                                   
+                </div>
+                <div class="p-2 my-2 mx-1 row border border-dark">
+                    <div class="m-0 p-0 col">
+                        <strong>Channel X</strong>
+                    </div>
+                    <div class="m-0 px-1 py-0 col">
+                        <div class="d-flex flex-row-reverse">    
+                            <a href="deleteChannel"><i class="fas fa-trash-alt"></i></a>
+                            <a href="editChannel"><i class="fas fa-edit"></i></a>
+                        </div> 
+                    </div>                                                                                   
+                </div>
+                <div class="p-2 my-2 mx-1 row border border-dark">
+                    <div class="m-0 p-0 col">
+                        <strong>Channel X</strong>
+                    </div>
+                    <div class="m-0 px-1 py-0 col">
+                        <div class="d-flex flex-row-reverse">    
+                            <a href="deleteChannel"><i class="fas fa-trash-alt"></i></a>
+                            <a href="editChannel"><i class="fas fa-edit"></i></a>
+                        </div> 
+                    </div>                                                                                   
+                </div>
+                <div class="row border border-dark mx-1 my-2 p-1">
+                    Create A Channel
+                </div>
+                <div class="row p-0 m-0">
+                    <div class="my-1 p-0 row align-items-center no-gutters w-100">
+                        <div class="m-0 p-0 col-6 colFriendsList text-center">
+                            <div class="row m-0 py-2 px-1">
+                                Channel Name
+                            </div>
+                            <div class="row m-0 py-0 px-1">
+                                <input type="channelName" class="form-control" aria-describedby="emailHelp" placeholder="Enter new channel name">
+                            </div>
+                            <div class="row m-0 py-2 px-1">
+                                Avatar
+                            </div>
+                            <div class="row m-0 py-0 px-1">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text py-0" id="inputGroupFileAddon01">Upload</span>
+                                    </div>
+                                    <div class="custom-file">
+                                      <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                                      <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-0 p-0 col-6 colFriendsList">
+                            <div class="text-center">
+                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark text-center newAvatarImage">     
+                            </div> 
+                        </div>                                                                                   
+                    </div>  
+                </div>
+                <div class="row m-0 px-1 py-2">
+                    Add Users
                 </div>
                 <div id="add-user" class="row m-0 p-0 row-horizon d-flex flex-row flex-nowrap scrolling-wrapper">
                     <div class="add-user col-xs-6 col-sm-6 col-md-4 col-lg-3">
@@ -229,14 +300,12 @@
                         </div>
                         <p>Joe Doe</p> 
                     </div>   
-                </div> 
-                <div class="col m-0 p-0">
-                    <p></p>
                 </div>
-
-
-            </div>  
+                <div class="row m-0 p-0 align-items-center d-flex justify-content-center">
+                    <div class="div border-dark border text-center p-2">Update</div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-<%- include('partials/footer'); %>
+
