@@ -9,12 +9,16 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stylesheets/style.css">
 </head>
-
+<% 
+var channels = locals.channels
+var owned = ("owned" in  channels) ? channels.owned : false
+var subscribed = ("subscribed" in  channels) ? channels.subscribed : false
+%>
 <div class="container-fluid">
     <div class="row m-1 no-gutters">
         <div class="col-3 border border-dark height-4vw">
             <p class="m-1">Account</p>
-            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="m-1 rounded-circle border border-dark maxsize-3vw"> 
+            <img src="<%= user.photoURL %>" alt="avatar" class="m-1 rounded-circle border border-dark minsize-3vw"> 
             <a href="account" class="m-1"><i class="fa fa-cog" aria-hidden="true"></i></a>
         </div>
         <a href="/" class="col-3 border border-dark height-4vw">
@@ -25,9 +29,16 @@
             Channels
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-            <button class="dropdown-item" type="button"><a href="loggedIn">Channel X</a></button>
-            <button class="dropdown-item" type="button"><a href="loggedIn">Channel X</a></button>
-            <button class="dropdown-item" type="button"><a href="loggedIn">Channel X</a></button>
+                <button class="dropdown-item" type="button"><a href="loggedIn">Channel X</a></button>
+                <% if (owned) { %>
+                    <ul class="pl-0">
+                        <% owned.forEach(function(channel) { %>
+                            <li class="p-1 my-1 mx-1 row border border-dark align-items-center">
+                                <strong><a href="/channel/<%= channel.id %>/"><%= channel.name %></a></strong>      
+                            </li>
+                        <% }) %>
+                    </ul>
+                <% }  %>
             </div>
         </div>
         <div class="col-3 border border-dark height-4vw">
@@ -119,27 +130,58 @@
                             <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
                         </div>                                                                                   
                     </div> 
-                </div>                                                 
+                </div>                                             
             </div>
             <div class="m-0 p-2 col">
                 <a href="addFriend">Add Friend</a>
                 <a href="addFriend"><i class="fa fa-plus" aria-hidden="true"></i></a>
             </div>
             <div class="m-0 p-2 col">
-                <a href="editChannel">Channels</a>
+                <a href="editChannel">Your Channels</a>
                 <a href="editChannel"><i class="fa fa-cog" aria-hidden="true"></i></a>
             </div>
             <div class="row channelList scrollbar-deep-purple bordered-deep-purple thin m-1">
                 <div class="container-fluid overflow-auto m-0 p-1">
-                    <div class="col border border-primary">Channel X</div>
-                    <div class="col border border-primary">Channel X</div>
-                    <div class="col border border-primary">Channel X</div>
-                    <div class="col border border-primary">Channel X</div>
-                    <div class="col border border-primary">Channel X</div>
-                    <div class="col border border-primary">Channel X</div>
-                    <div class="col border border-primary">Channel X</div>
-                    <div class="col border border-primary">Channel X</div>
-                    <div class="col border border-primary">Channel X</div>
+                    <div id="owned-channels" class="user-channels">
+                        <% if (owned) { %>
+                            <ul class="pl-0">
+                            <% owned.forEach(function(channel) { %>
+                                <li class="row align-items-center no-gutters border border-primary my-1">
+                                    <div class="p-0 col">
+                                        <a href="/channel/<%= channel.id %>/"><%= channel.name %></a>
+                                    </div>
+                                    <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                                        <img src="<%= channel.image %>" alt="<%= channel.name %>" class="rounded-circle border border-dark minsize-3vw">
+                                    </div>
+                                </li>
+                            <% }) %>
+                            </ul>
+                        <% }  %>
+                    </div>
+                </div>                                                  
+            </div>
+            <div class="m-0 p-2 col">
+                <a href="editChannel">Subscribed Channels</a>
+                <a href="editChannel"><i class="fa fa-cog" aria-hidden="true"></i></a>
+            </div>
+            <div class="row channelList scrollbar-deep-purple bordered-deep-purple thin m-1">
+                <div class="container-fluid overflow-auto m-0 p-1">
+                    <div id="subscribed-channels" >
+                        <% if (subscribed) { %>
+                            <ul class="pl-0">
+                                <% subscribed.forEach(function(channel) { %>
+                                    <li class="row align-items-center no-gutters border border-primary my-1">
+                                        <div class="p-0 col">
+                                            <a href="/channel/<%= channel.id %>/"><%= channel.name %></a>
+                                        </div>
+                                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                                            <img src="<%= channel.image %>" alt="<%= channel.name %>" class="rounded-circle border border-dark minsize-3vw">
+                                        </div>
+                                    </li>
+                                <% }) %>
+                            </ul>
+                        <% }  %>     
+                    </div>
                 </div>                                                  
             </div>
             <div class="m-0 p-2 col">
@@ -152,50 +194,23 @@
                 <div class="col border border-dark mx-1 mb-2 p-1">
                     Channels
                 </div>
-                <div class="p-2 my-2 mx-1 row border border-dark">
-                    <div class="m-0 p-0 col">
-                        <strong>Channel X</strong>
-                    </div>
-                    <div class="m-0 px-1 py-0 col">
-                        <div class="d-flex flex-row-reverse">    
-                            <a href="deleteChannel"><i class="fas fa-trash-alt"></i></a>
-                            <a href="editChannel"><i class="fas fa-edit"></i></a>
-                        </div> 
-                    </div>                                                                                   
-                </div>
-                <div class="p-2 my-2 mx-1 row border border-dark">
-                    <div class="m-0 p-0 col">
-                        <strong>Channel X</strong>
-                    </div>
-                    <div class="m-0 px-1 py-0 col">
-                        <div class="d-flex flex-row-reverse">    
-                            <a href="deleteChannel"><i class="fas fa-trash-alt"></i></a>
-                            <a href="editChannel"><i class="fas fa-edit"></i></a>
-                        </div> 
-                    </div>                                                                                   
-                </div>
-                <div class="p-2 my-2 mx-1 row border border-dark">
-                    <div class="m-0 p-0 col">
-                        <strong>Channel X</strong>
-                    </div>
-                    <div class="m-0 px-1 py-0 col">
-                        <div class="d-flex flex-row-reverse">    
-                            <a href="deleteChannel"><i class="fas fa-trash-alt"></i></a>
-                            <a href="editChannel"><i class="fas fa-edit"></i></a>
-                        </div> 
-                    </div>                                                                                   
-                </div>
-                <div class="p-2 my-2 mx-1 row border border-dark">
-                    <div class="m-0 p-0 col">
-                        <strong>Channel X</strong>
-                    </div>
-                    <div class="m-0 px-1 py-0 col">
-                        <div class="d-flex flex-row-reverse">    
-                            <a href="deleteChannel"><i class="fas fa-trash-alt"></i></a>
-                            <a href="editChannel"><i class="fas fa-edit"></i></a>
-                        </div> 
-                    </div>                                                                                   
-                </div>
+                <% if (owned) { %>
+                    <ul class="pl-0">
+                    <% owned.forEach(function(channel) { %>
+                        <li class="p-1 my-1 mx-1 row border border-dark align-items-center">
+                            <div class="m-0 p-0 col">
+                                <strong><a href="/channel/<%= channel.id %>/"><%= channel.name %></a></strong>
+                            </div>
+                            <div class="m-0 px-1 py-0 col">
+                                <div class="d-flex flex-row-reverse">    
+                                    <a href="/channels/delete/<%= channel.id %>/"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                    <img src="<%= channel.image %>" alt="<%= channel.name %>" class="rounded-circle border border-dark minsize-3vw mr-2">
+                                </div> 
+                            </div>        
+                        </li>
+                    <% }) %>
+                    </ul>
+                <% }  %>
                 <% var users = locals.channels.users %>
                 <form id="channel-create-form" action="/channels/add" method="post" enctype="multipart/form-data">
                     <div class="row border border-dark mx-1 my-2 p-1">
@@ -227,7 +242,7 @@
                             </div>
                             <div class="m-0 p-0 col-6 colFriendsList">
                                 <div class="text-center">
-                                    <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark text-center newAvatarImage">     
+                                    <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark text-center newAvatarImage">    
                                 </div> 
                             </div>                                                                                   
                         </div>  
@@ -237,78 +252,16 @@
                     </div>
                     <div id="add-user" class="row m-0 p-0 row-horizon d-flex flex-row flex-nowrap scrolling-wrapper">
                         <div class="add-user col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                            <div class="container">
-                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center image">
-                                <div class="middle">
-                                    <div class="text">
-                                        <h3><i id="add-user-plus" class="fa fa-plus" aria-hidden="true"></i></h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <p>Joe Doe</p> 
-                        </div>   
-                        <div class="add-user col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                            <div class="container">
-                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center image">
-                                <div class="middle">
-                                    <div class="text">
-                                        <h3><i id="add-user-plus" class="fa fa-plus" aria-hidden="true"></i></h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <p>Joe Doe</p> 
-                        </div>   
-                        <div class="add-user col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                            <div class="container">
-                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center image">
-                                <div class="middle">
-                                    <div class="text">
-                                        <h3><i id="add-user-plus" class="fa fa-plus" aria-hidden="true"></i></h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <p>Joe Doe</p> 
-                        </div>   
-                        <div class="add-user col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                            <div class="container">
-                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center image">
-                                <div class="middle">
-                                    <div class="text">
-                                        <h3><i id="add-user-plus" class="fa fa-plus" aria-hidden="true"></i></h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <p>Joe Doe</p> 
-                        </div>   
-                        <div class="add-user col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                            <div class="container">
-                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center image">
-                                <div class="middle">
-                                    <div class="text">
-                                        <h3><i id="add-user-plus" class="fa fa-plus" aria-hidden="true"></i></h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <p>Joe Doe</p> 
-                        </div>   
-                        <div class="add-user col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                            <div class="container">
-                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle border border-dark text-center image">
-                                <div class="middle">
-                                    <div class="text">
-                                        <h3><i id="add-user-plus" class="fa fa-plus" aria-hidden="true"></i></h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <p>Joe Doe</p> 
+                            <% if (users) { %>
+                                <% users.forEach(function(user) { %>
+                                    <img src="<%= user.photoURL %>" alt="avatar" class="rounded-circle border border-dark text-center image">
+                                    <input class="user-check-input" id="user<%= user.id %>" type="checkbox" name="users" value="<%= user.id %>">
+                                    <p><%= user.name %></p>
+                                <% }) %>
+                            <% } %>
                         </div>   
                     </div>
-                    <% if (users) { %>
-                        <% users.forEach(function(user) { %>
-                            <input class="user-check-input" id="user<%= user.id %>" type="checkbox" name="users" value="<%= user.id %>">
-                            <p><%= user.name %></p>
-                        <% }) %>
-                    <% } %>
+                    
                     <div class="row m-0 p-0 align-items-center d-flex justify-content-center">
                         <button class="div border-dark border text-center p-2" id="update" type="submit">Create</button>
                     </div>
@@ -329,11 +282,7 @@
         </div>
     </div>
 </div>
-<% 
-var channels = locals.channels
-var owned = ("owned" in  channels) ? channels.owned : false
-var subscribed = ("subscribed" in  channels) ? channels.subscribed : false
-%>
+
 <div id="owned-channels" class="user-channels">
 	<h4>Your Channels</h4>
 <% if (owned) { %>
@@ -348,6 +297,8 @@ var subscribed = ("subscribed" in  channels) ? channels.subscribed : false
 	</ul>
 <% }  %>
 </div>
+
+
 <div id="subscribed-channels" >
 	<h4>Subscribed Channels</h4>
 <% if (subscribed) { %>
