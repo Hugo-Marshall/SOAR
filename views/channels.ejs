@@ -16,6 +16,7 @@ var subscribed = ("subscribed" in  channels) ? channels.subscribed : false
 %>
 <div class="container-fluid">
     <div class="row m-1 no-gutters">
+        <%- include('partials/navbar'); %>
         <div class="col-3 border border-dark height-4vw">
             <p class="m-1">Account</p>
             <img src="<%= user.photoURL %>" alt="avatar" class="m-1 rounded-circle border border-dark minsize-3vw"> 
@@ -196,19 +197,19 @@ var subscribed = ("subscribed" in  channels) ? channels.subscribed : false
                 </div>
                 <% if (owned) { %>
                     <ul class="pl-0">
-                    <% owned.forEach(function(channel) { %>
-                        <li class="p-1 my-1 mx-1 row border border-dark align-items-center">
-                            <div class="m-0 p-0 col">
-                                <strong><a href="/channel/<%= channel.id %>/"><%= channel.name %></a></strong>
-                            </div>
-                            <div class="m-0 px-1 py-0 col">
-                                <div class="d-flex flex-row-reverse">    
-                                    <a href="/channels/delete/<%= channel.id %>/"><i class="fa fa-trash" aria-hidden="true"></i></a>
-                                    <img src="<%= channel.image %>" alt="<%= channel.name %>" class="rounded-circle border border-dark minsize-3vw mr-2">
-                                </div> 
-                            </div>        
-                        </li>
-                    <% }) %>
+                        <% owned.forEach(function(channel) { %>
+                            <li class="p-1 my-1 mx-1 row border border-dark align-items-center">
+                                <div class="m-0 p-0 col">
+                                    <strong><a href="/channel/<%= channel.id %>/"><%= channel.name %></a></strong>
+                                </div>
+                                <div class="m-0 px-1 py-0 col">
+                                    <div class="d-flex flex-row-reverse">    
+                                        <a href="/channels/delete/<%= channel.id %>/"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                        <img src="<%= channel.image %>" alt="<%= channel.name %>" class="rounded-circle border border-dark minsize-3vw mr-2">
+                                    </div> 
+                                </div>        
+                            </li>
+                        <% }) %>
                     </ul>
                 <% }  %>
                 <% var users = locals.channels.users %>

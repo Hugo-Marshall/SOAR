@@ -74,6 +74,12 @@ a i {
   min-height: 7vw;
   min-width: 7vw;
 }
+.maxsize-6vw{
+  max-width: 6vw;
+  max-height: 6vw;
+  min-height: 6vw;
+  min-width: 6vw;
+}
 
 /* Sidebar */
 .scrollbar-deep-purple::-webkit-scrollbar-track {
