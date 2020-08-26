@@ -9,12 +9,11 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stylesheets/style.css">
 </head>
-
 <div class="container-fluid">
     <div class="row m-1 no-gutters">
         <div class="col-3 border border-dark height-4vw">
             <p class="m-1">Account</p>
-            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="m-1 rounded-circle border border-dark maxsize-3vw"> 
+            <img src="<%= user.photoURL %>" alt="avatar" class="m-1 rounded-circle border border-dark minsize-3vw">
             <a href="account" class="m-1"><i class="fa fa-cog" aria-hidden="true"></i></a>
         </div>
         <a href="/" class="col-3 border border-dark height-4vw">
@@ -25,9 +24,7 @@
             Channels
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-            <button class="dropdown-item" type="button"><a href="loggedIn">Channel X</a></button>
-            <button class="dropdown-item" type="button"><a href="loggedIn">Channel X</a></button>
-            <button class="dropdown-item" type="button"><a href="loggedIn">Channel X</a></button>
+                <button class="dropdown-item" type="button"><a href="loggedIn">Channel X</a></button>
             </div>
         </div>
         <div class="col-3 border border-dark height-4vw">

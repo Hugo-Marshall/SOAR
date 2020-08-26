@@ -17,40 +17,12 @@ var subscribed = ("subscribed" in  channels) ? channels.subscribed : false
 <div class="container-fluid">
     <div class="row m-1 no-gutters">
         <%- include('partials/navbar'); %>
-        <div class="col-3 border border-dark height-4vw">
-            <p class="m-1">Account</p>
-            <img src="<%= user.photoURL %>" alt="avatar" class="m-1 rounded-circle border border-dark minsize-3vw"> 
-            <a href="account" class="m-1"><i class="fa fa-cog" aria-hidden="true"></i></a>
-        </div>
-        <a href="/" class="col-3 border border-dark height-4vw">
-            Log Out
-        </a>
-        <div class="dropdown col-3 border border-dark height-4vw">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Channels
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                <button class="dropdown-item" type="button"><a href="loggedIn">Channel X</a></button>
-                <% if (owned) { %>
-                    <ul class="pl-0">
-                        <% owned.forEach(function(channel) { %>
-                            <li class="p-1 my-1 mx-1 row border border-dark align-items-center">
-                                <strong><a href="/channel/<%= channel.id %>/"><%= channel.name %></a></strong>      
-                            </li>
-                        <% }) %>
-                    </ul>
-                <% }  %>
-            </div>
-        </div>
-        <div class="col-3 border border-dark height-4vw">
-            SOAR
-        </div>
-        <div class="col-2 col border border-dark p-0">
-            <div class="m-0 p-2 col">
+        <div class="col-2 col border border-dark p-0 my-1 mx-0">
+            <div class="m-0 p-1 col">
                 <strong>Friends</strong>
             </div>
             <div class="row friendsList scrollbar-deep-purple bordered-deep-purple thin m-1">
-                <div class="container-fluid overflow-auto m-0 p-1">
+                <div class="container-fluid overflow-auto m-0 px-1 py-0">
                     <div class="my-1 row align-items-center no-gutters border border-primary">
                         <div class="p-0 col">
                             <strong>John Doe</strong>
@@ -133,16 +105,16 @@ var subscribed = ("subscribed" in  channels) ? channels.subscribed : false
                     </div> 
                 </div>                                             
             </div>
-            <div class="m-0 p-2 col">
+            <div class="m-0 p-1 col">
                 <a href="addFriend">Add Friend</a>
                 <a href="addFriend"><i class="fa fa-plus" aria-hidden="true"></i></a>
             </div>
-            <div class="m-0 p-2 col">
+            <div class="m-0 p-1 col">
                 <a href="editChannel">Your Channels</a>
                 <a href="editChannel"><i class="fa fa-cog" aria-hidden="true"></i></a>
             </div>
             <div class="row channelList scrollbar-deep-purple bordered-deep-purple thin m-1">
-                <div class="container-fluid overflow-auto m-0 p-1">
+                <div class="container-fluid overflow-auto m-0 px-1 py-0">
                     <div id="owned-channels" class="user-channels">
                         <% if (owned) { %>
                             <ul class="pl-0">
@@ -161,12 +133,12 @@ var subscribed = ("subscribed" in  channels) ? channels.subscribed : false
                     </div>
                 </div>                                                  
             </div>
-            <div class="m-0 p-2 col">
+            <div class="m-0 p-1 col">
                 <a href="editChannel">Subscribed Channels</a>
                 <a href="editChannel"><i class="fa fa-cog" aria-hidden="true"></i></a>
             </div>
             <div class="row channelList scrollbar-deep-purple bordered-deep-purple thin m-1">
-                <div class="container-fluid overflow-auto m-0 p-1">
+                <div class="container-fluid overflow-auto m-0 px-1 py-0">
                     <div id="subscribed-channels" >
                         <% if (subscribed) { %>
                             <ul class="pl-0">
@@ -185,18 +157,18 @@ var subscribed = ("subscribed" in  channels) ? channels.subscribed : false
                     </div>
                 </div>                                                  
             </div>
-            <div class="m-0 p-2 col">
+            <div class="m-0 p-1 col">
                 <a href="channels">Create Channel</a>
                 <a href="channels"><i class="fa fa-plus" aria-hidden="true"></i></a>
             </div>
         </div>
         <div class="col-lg-10 col-md-12">
             <div class="container-fluid">
-                <div class="col border border-dark mx-1 mb-2 p-1">
-                    Channels
+                <div class="row col m-1 p-0">
+                    <div class="col m-0 p-1 border border-dark">Channels</div>
                 </div>
                 <% if (owned) { %>
-                    <ul class="pl-0">
+                    <ul class="pl-0 mb-0">
                         <% owned.forEach(function(channel) { %>
                             <li class="p-1 my-1 mx-1 row border border-dark align-items-center">
                                 <div class="m-0 p-0 col">
@@ -243,7 +215,7 @@ var subscribed = ("subscribed" in  channels) ? channels.subscribed : false
                             </div>
                             <div class="m-0 p-0 col-6 colFriendsList">
                                 <div class="text-center">
-                                    <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark text-center newAvatarImage">    
+                                    <!-- <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark text-center newAvatarImage">  --> 
                                 </div> 
                             </div>                                                                                   
                         </div>  
@@ -253,16 +225,20 @@ var subscribed = ("subscribed" in  channels) ? channels.subscribed : false
                     </div>
                     <div id="add-user" class="row m-0 p-0 row-horizon d-flex flex-row flex-nowrap scrolling-wrapper">
                         <div class="add-user col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                            <% var users = locals.channels.users %>
                             <% if (users) { %>
                                 <% users.forEach(function(user) { %>
-                                    <img src="<%= user.photoURL %>" alt="avatar" class="rounded-circle border border-dark text-center image">
-                                    <input class="user-check-input" id="user<%= user.id %>" type="checkbox" name="users" value="<%= user.id %>">
-                                    <p><%= user.name %></p>
+                                    <div class="row">
+                                        <p class="col"><%= user.name %></p>
+                                        <div class="col">
+                                            <img src="<%= user.photoURL %>" class="rounded-circle border border-dark text-center image">
+                                            <input class="user-check-input" id="user<%= user.id %>" type="checkbox" name="users" value="<%= user.id %>">
+                                        </div>
+                                    </div>
                                 <% }) %>
                             <% } %>
                         </div>   
                     </div>
-                    
                     <div class="row m-0 p-0 align-items-center d-flex justify-content-center">
                         <button class="div border-dark border text-center p-2" id="update" type="submit">Create</button>
                     </div>

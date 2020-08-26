@@ -117,47 +117,47 @@ width: 6px; }
 .friendsList {
 position: relative;
 overflow-y: scroll;
-height: 275px; }
+height: 200px; }
 
 .colFriendsList {
-  border: none;
-  background-color: white;
+border: none;
+background-color: white;
 }
 .userList {
-  position: relative;
-  overflow-y: scroll;
-  height: 622px; }
+position: relative;
+overflow-y: scroll;
+height: 622px; }
 
 .colUsersList {
-  border: none;
-  background-color: white; }
+border: none;
+background-color: white; }
 
 .channelList {
-  position: relative;
-  overflow-y: scroll;
-  height: 275px; }
+position: relative;
+overflow-y: scroll;
+height: 200px; }
 
 .colChannelList {
-  border: none;
-  background-color: white;
-  min-height: 35px; }
+border: none;
+background-color: white;
+min-height: 35px; }
 
 .messageList {
-  position: relative;
-  overflow-y: scroll;
-  height: 654px; }
+position: relative;
+overflow-y: scroll;
+height: 654px; }
 
 .colMessageList {
-  border: none;
-  background-color: white;}
+border: none;
+background-color: white;}
 
 .col{
-  border: none;
-  background-color: white;
+border: none;
+background-color: white;
 }
 .colList{
-  border: none;
-  background-color: white;
+border: none;
+background-color: white;
 }
 
 /* #add-users */
