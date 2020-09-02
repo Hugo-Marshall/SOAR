@@ -9,31 +9,32 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stylesheets/style.css">
 </head>
-<div class="container-fluid">
-    <div class="my-1 row">
-        <div class="mx-auto col-3">
-            <div class="row">
-                <div class="col col-12 border border-dark my-1 mx-0">
-                    <p class="m-3 p-3">SOAR</p>
+<div class="container-fluid col-12 p-0 d-flex align-items-center h-100">
+    <div class="row p-0 col-12 justify-content-center">
+        <div class="col-lg-3 col-md-5 col-11 p-0">
+            <div class="row col-12 p-0">
+                <div class="col col-12 border border-dark m-1">
+                    <p class="m-0 p-4">SOAR</p>
                 </div>
-                <div class="col-12 border border-dark my-1 mx-0">
+                <div class="col-12 border border-dark m-1">
                     <form action="/register" method="post">
-                    <p class="m-2"> Email</p>
-                    <input name="email" type="email" class="form-control my-2" aria-describedby="emailHelp" placeholder="Enter email">
+                    <p class="left"> Email</p>
+                    <input name="email" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
                 </div>
-                <div class="col-12 border border-dark my-1 mx-0">
-                    <p class="m-2"> Password</p>
-                    <input name="password" type="password" class="form-control my-2" placeholder="Password">
+                <div class="col-12 border border-dark m-1">
+                    <p class="left"> Password</p>
+                    <input name="password" type="password" class="form-control" placeholder="Password">
                 </div>
-                <div class="col-12 border border-dark my-1 mx-0">
-                    <p class="m-2"> Confirm Password</p>
-                    <input name="passwordConfirm" type="password" class="form-control my-2" placeholder="Password">
+                <div class="col-12 border border-dark m-1">
+                    <p class="left"> Confirm Password</p>
+                    <input name="passwordConfirm" type="password" class="form-control" placeholder="Password">
                 </div>
-                <div class="col col-12 border border-dark p-0 my-1 mx-0">
-                    <button type="submit" class="btn btn-light btn-lg btn-outline-dark centre mx-auto p-2 my-2">Create Account</button>
+                <div class="col col-12 border border-dark m-1">
+                    <button type="submit" class="btn btn-light btn-lg btn-outline-dark centre">Create Account</button>
+                    </form>
                 </div>
                 <% if (locals.errors && locals.errors.register) { %>
-                    <div class="row justify-content-md-center col-12 p-0 m-0">
+                    <div class="row justify-content-md-center col-12 p-0 m-1">
                         <% locals.errors.register.forEach(function(error) { %>
                             <div class="col-12 div alert alert-primary m-2 py-3 alert-dismissible fade show border-dark border" id="textcentre" role="alert">
                                 <p class="mb-0"><%= error %></p>
@@ -44,9 +45,8 @@
                         <% }) %>
                     </div>
                 <% } %>
-                </form>
-                <div class="col col-12 border border-dark p-0 my-1 mx-0">
-                    <button type="button" class="btn btn-light btn-lg btn-outline-dark centre mx-auto p-2 my-2"><a href="/">Login</a></button>
+                <div class="col col-12 border border-dark m-1">
+                    <button type="button" class="btn btn-light btn-lg btn-outline-dark centre"><a href="/">login</a></button>
                 </div>
             </div>
         </div>

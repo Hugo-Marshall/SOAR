@@ -1,5 +1,6 @@
-body {
+body , html{
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  height: 100%;
 }
 a {
   color: #00B7FF;
@@ -18,16 +19,6 @@ a i {
 }
 .row:last-of-type {
   margin-bottom: 0;
-}
-.grid,
-.col {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-.col {
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  padding: 1em;
-  text-align: center;
-  margin: 5px 0;
 }
 .container-fluid {
   padding-right:0;
@@ -164,10 +155,6 @@ height: 654px; }
 border: none;
 background-color: white;}
 
-.col{
-border: none;
-background-color: white;
-}
 .colList{
 border: none;
 background-color: white;
@@ -202,3 +189,22 @@ background-color: white;
 ul {
   list-style-type: none;
   }
+
+
+
+*[class*='col']{
+  margin: 0px;
+  color: black;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: white;
+}
+
+*[class*='left']{
+  text-align: left;
+}
+
+*[class*='right']{
+  text-align: right;
+}
