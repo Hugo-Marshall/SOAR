@@ -13,60 +13,60 @@
     <div class="my-1 row">
         <div class="mx-auto col-10">
             <div class="row">
-                <div class="border border-dark col-lg-3 col-md-6 col-12">
-                    <p class="">Account</p>
-                    <img src="<%= user.photoURL %>" alt="avatar" class="rounded-circle border border-dark minsize-3vw">
+                <div class="border border-dark col-lg-3 col-md-6 col-12 justify-content-center align-items-center d-flex">
+                    <p class="m-0 mr-3">Account</p>
+                    <img src="<%= user.photoURL %>" alt="avatar" class="rounded-circle border border-dark smallavatar mr-3">
                     <a href="account" class=""><i class="fa fa-cog" aria-hidden="true"></i></a>
                 </div>
-                <a href="/" class="border border-dark col-lg-3 col-md-6 col-12">
+                <a href="/" class="border border-dark col-lg-3 col-md-6 col-12 justify-content-center align-items-center d-flex">
                     Log Out
                 </a>
-                <div class="dropdown border border-dark col-lg-3 col-md-6 col-12">
+                <div class="dropdown border border-dark col-lg-3 col-md-6 col-12 justify-content-center align-items-center d-flex">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Channels
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <button class="dropdown-item" type="button"><a href="loggedIn">Channel X</a></button>
+                        <button class="dropdown-item" type="button"><a href="channels">Channels</a></button>
                     </div>
                 </div>
-                <div class="border border-dark col-lg-3 col-md-6 col-12">
+                <div class="border border-dark col-lg-3 col-md-6 col-12 justify-content-center align-items-center d-flex">
                     SOAR
                 </div>
             </div>
             <div class="row">
-                <div class="col-6 border border-dark minsize-7vw my-2 mx-0">
+                <div class="col-md-6 col-12 border border-dark my-2 mx-0">
                     <form action="/account" method="post" enctype="multipart/form-data">
-                    <p class=""> Current Email</p> 
+                    <p class="left"> Current Email</p> 
                     <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Current email" value="<%= locals.user.email %>" readonly>
                 </div>
-                <div class="col-6 border border-dark minsize-7vw my-2 mx-0">
-                    <p class=""> New Email</p>
+                <div class="col-md-6 col-12 border border-dark my-2 mx-0">
+                    <p class="left"> New Email</p>
                     <input name="email" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email" value="<%= locals.user.email %>" >
                 </div>
             </div>
             <div class="row">
-                <div class="col-6 border border-dark minsize-7vw my-2 mx-0">
-                    <p class=""> Current Account Name</p> 
+                <div class="col-md-6 col-12 border border-dark my-2 mx-0">
+                    <p class="left"> Current Account Name</p> 
                     <input type="accountName" class="form-control" placeholder="Current account name" value="<%= locals.user.displayName %>" readonly>
                 </div>
-                <div class="col-6 border border-dark minsize-7vw my-2 mx-0">
-                    <p class=""> New Account Name</p>
+                <div class="col-md-6 col-12 border border-dark my-2 mx-0">
+                    <p class="left"> New Account Name</p>
                     <input name="displayName" type="text" class="form-control" placeholder="Enter account name" value="<%= locals.user.displayName %>" >
                 </div>
             </div>
             <div class="row">
-                <div class="col-6 border border-dark minsize-7vw my-2 mx-0">
+                <div class="col-md-6 col-12 border border-dark my-2 mx-0">
                     <div class="row align-items-center h-100">
-                        <div class="col-6 text-center">
+                        <div class="col-6 text-center p-0">
                             <strong><%= locals.user.displayName %></strong>
                         </div>
-                        <div class="col-6 text-center">
+                        <div class="col-6 text-center p-0">
                             <img src="<%= user.photoURL %>" alt="avatar" class="rounded-circle border border-dark maxsize-6vw"> 
                         </div>                                                                                   
                     </div>  
                 </div>
-                <div class="col-6 border border-dark minsize-7vw my-2 mx-0">
-                    <p class=""> New Avatar</p>
+                <div class="col-md-6 col-12 border border-dark my-2 mx-0">
+                    <p class="left"> New Avatar</p>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
@@ -79,7 +79,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 border border-dark minsize-7vw my-2 mx-0">
+                <div class="col-12 border border-dark my-2 mx-0 ">
                     <button type="submit" class="btn btn-light btn-lg btn-outline-dark">Change Account Details</button>
                     </form> 
                 </div>
@@ -99,27 +99,27 @@
                 <% } %>
             </div>
             <div class="row">
-                <div class="col-6 border border-dark minsize-7vw my-2 mx-0">
+                <div class="col-md-6 col-12 border border-dark my-2 mx-0">
                     <form action="/password" method="post" enctype="multipart/form-data">
-                    <p class=""> Old Password</p>
+                    <p class="left"> Old Password</p>
                     <input type="password" class="form-control" placeholder="Old Password" readonly>
                 </div>
-                <div class="col-6 border border-dark minsize-7vw my-2 mx-0">
-                    <p class=""> Password</p>
+                <div class="col-md-6 col-12 border border-dark my-2 mx-0">
+                    <p class="left"> Password</p>
                     <input name="password" type="password" class="form-control" placeholder="Password">
                 </div>
             </div>
             <div class="row">
-                <div class="col-6 border border-dark minsize-7vw my-2 mx-0">
+                <div class="col-md-6 col-12 border border-dark my-2 mx-0">
                     <p class=""></p>
                 </div>
-                <div class="col-6 border border-dark minsize-7vw my-2 mx-0">
-                    <p class=""> Confirm Password</p>
+                <div class="col-md-6 col-12 border border-dark my-2 mx-0">
+                    <p class="left"> Confirm Password</p>
                     <input name="passwordConfirm" type="password" class="form-control" placeholder="Confirm Password">
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 border border-dark minsize-7vw my-2 mx-0">
+                <div class="col-12 border border-dark my-2 mx-0">
                     <button type="submit" class="btn btn-light btn-lg btn-outline-dark">Update Password</button>
                     </form>
                 </div>

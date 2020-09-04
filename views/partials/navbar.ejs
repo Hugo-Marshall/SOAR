@@ -3,31 +3,41 @@ var channels = locals.channels
 var owned = ("owned" in  channels) ? channels.owned : false
 var subscribed = ("subscribed" in  channels) ? channels.subscribed : false
 %>
-<div class="col-3 border border-dark height-4vw">
-    <p class="m-1">Account</p>
-    <img src="<%= user.photoURL %>" alt="avatar" class="m-1 rounded-circle border border-dark minsize-3vw">
-    <a href="account" class="m-1"><i class="fa fa-cog" aria-hidden="true"></i></a>
-</div>
-<a href="/" class="col-3 border border-dark height-4vw">
-    Log Out
-</a>
-<div class="dropdown col-3 border border-dark height-4vw">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Channels
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-        <button class="dropdown-item" type="button"><a href="loggedIn">Channel X</a></button>
-        <% if (owned) { %>
-            <ul class="pl-0">
-                <% owned.forEach(function(channel) { %>
-                    <li class="p-1 my-1 mx-1 row border border-dark align-items-center">
-                        <strong><a href="/channel/<%= channel.id %>/"><%= channel.name %></a></strong>      
-                    </li>
-                <% }) %>
-            </ul>
-        <% }  %>
+<div class="row col-12 p-0">
+    <div class="border border-dark col-lg-3 col-md-6 col-12 justify-content-center align-items-center d-flex">
+        <p class="m-0 mr-3">Account</p>
+        <img src="<%= user.photoURL %>" alt="avatar" class="rounded-circle border border-dark smallavatar mr-3">
+        <a href="account" class=""><i class="fa fa-cog" aria-hidden="true"></i></a>
     </div>
-</div>
-<div class="col-3 border border-dark height-4vw">
-    SOAR
+    <a href="/" class="border border-dark col-lg-3 col-md-6 col-12 justify-content-center align-items-center d-flex">
+        Log Out
+    </a>
+    <div class="dropdown border border-dark col-lg-3 col-md-6 col-12 justify-content-center align-items-center d-flex">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Channels
+        </button>
+        <div class="dropdown-menu p-0" aria-labelledby="dropdownMenu2">
+            <% if (owned) { %>
+                <ul class="m-0 p-0">
+                    <% owned.forEach(function(channel) { %>
+                        <li class="p-1 my-1 mx-1 row border border-dark justify-content-center">
+                            <strong><a href="/channel/<%= channel.id %>/"><%= channel.name %></a></strong>      
+                        </li>
+                    <% }) %>
+                </ul>
+            <% }  %>
+            <% if (subscribed) { %>
+                <ul class="m-0 p-0">
+                    <% subscribed.forEach(function(channel) { %>
+                        <li class="p-1 my-1 mx-1 row border border-dark justify-content-center">
+                            <strong><a href="/channel/<%= channel.id %>/"><%= channel.name %></a></strong>      
+                        </li>
+                    <% }) %>
+                </ul>
+            <% }  %>
+        </div>
+    </div>
+    <div class="border border-dark col-lg-3 col-md-6 col-12 justify-content-center align-items-center d-flex">
+        SOAR
+    </div>
 </div>

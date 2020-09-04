@@ -17,152 +17,67 @@ var subscribed = ("subscribed" in  channels) ? channels.subscribed : false
 <div class="container-fluid">
     <div class="row m-1 no-gutters">
         <%- include('partials/navbar'); %>
-        <div class="col-2 col border border-dark p-0 my-1 mx-0">
-            <div class="m-0 p-1 col">
-                <strong>Friends</strong>
-            </div>
-            <div class="row friendsList scrollbar-deep-purple bordered-deep-purple thin m-1">
-                <div class="container-fluid overflow-auto m-0 px-1 py-0">
-                    <div class="my-1 row align-items-center no-gutters border border-primary">
-                        <div class="p-0 col">
-                            <strong>John Doe</strong>
-                        </div>
-                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
-                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
-                        </div>                                                                                   
-                    </div>  
-                    <div class="my-1 row align-items-center no-gutters border border-primary">
-                        <div class="p-0 col">
-                            <strong>John Doe</strong>
-                        </div>
-                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
-                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
-                        </div>                                                                                   
-                    </div> 
-                    <div class="my-1 row align-items-center no-gutters border border-primary">
-                        <div class="p-0 col">
-                            <strong>John Doe</strong>
-                        </div>
-                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
-                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
-                        </div>                                                                                   
-                    </div> 
-                    <div class="my-1 row align-items-center no-gutters border border-primary">
-                        <div class="p-0 col">
-                            <strong>John Doe</strong>
-                        </div>
-                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
-                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
-                        </div>                                                                                   
-                    </div> 
-                    <div class="my-1 row align-items-center no-gutters border border-primary">
-                        <div class="p-0 col">
-                            <strong>John Doe</strong>
-                        </div>
-                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
-                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
-                        </div>                                                                                   
-                    </div> 
-                    <div class="my-1 row align-items-center no-gutters border border-primary">
-                        <div class="p-0 col">
-                            <strong>John Doe</strong>
-                        </div>
-                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
-                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
-                        </div>                                                                                   
-                    </div> 
-                    <div class="my-1 row align-items-center no-gutters border border-primary">
-                        <div class="p-0 col">
-                            <strong>John Doe</strong>
-                        </div>
-                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
-                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
-                        </div>                                                                                   
-                    </div> 
-                    <div class="my-1 row align-items-center no-gutters border border-primary">
-                        <div class="p-0 col">
-                            <strong>John Doe</strong>
-                        </div>
-                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
-                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
-                        </div>                                                                                   
-                    </div> 
-                    <div class="my-1 row align-items-center no-gutters border border-primary">
-                        <div class="p-0 col">
-                            <strong>John Doe</strong>
-                        </div>
-                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
-                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
-                        </div>                                                                                   
-                    </div> 
-                    <div class="my-1 row align-items-center no-gutters border border-primary">
-                        <div class="p-0 col">
-                            <strong>John Doe</strong>
-                        </div>
-                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
-                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark minsize-3vw">     
-                        </div>                                                                                   
-                    </div> 
-                </div>                                             
-            </div>
-            <div class="m-0 p-1 col">
-                <a href="addFriend">Add Friend</a>
-                <a href="addFriend"><i class="fa fa-plus" aria-hidden="true"></i></a>
-            </div>
-            <div class="m-0 p-1 col">
-                <a href="editChannel">Your Channels</a>
-                <a href="editChannel"><i class="fa fa-cog" aria-hidden="true"></i></a>
-            </div>
-            <div class="row channelList scrollbar-deep-purple bordered-deep-purple thin m-1">
-                <div class="container-fluid overflow-auto m-0 px-1 py-0">
-                    <div id="owned-channels" class="user-channels">
-                        <% if (owned) { %>
-                            <ul class="pl-0">
-                            <% owned.forEach(function(channel) { %>
-                                <li class="row align-items-center no-gutters border border-primary my-1">
-                                    <div class="p-0 col">
-                                        <a href="/channel/<%= channel.id %>/"><%= channel.name %></a>
-                                    </div>
-                                    <div class="pr-1 p-0 col d-flex flex-row-reverse">
-                                        <img src="<%= channel.image %>" alt="<%= channel.name %>" class="rounded-circle border border-dark minsize-3vw">
-                                    </div>
-                                </li>
-                            <% }) %>
-                            </ul>
-                        <% }  %>
+        <div class="col-lg-2 col-md-4 col-12 col border border-dark p-0 my-1 mx-0">
+            <div class="row m-0">
+                <div class="col-md-12 col-6 p-0">
+                    <div class="m-0 p-1 col">
+                        <a href="editChannel">Your Channels</a>
+                        <a href="editChannel"><i class="fa fa-cog" aria-hidden="true"></i></a>
                     </div>
-                </div>                                                  
-            </div>
-            <div class="m-0 p-1 col">
-                <a href="editChannel">Subscribed Channels</a>
-                <a href="editChannel"><i class="fa fa-cog" aria-hidden="true"></i></a>
-            </div>
-            <div class="row channelList scrollbar-deep-purple bordered-deep-purple thin m-1">
-                <div class="container-fluid overflow-auto m-0 px-1 py-0">
-                    <div id="subscribed-channels" >
-                        <% if (subscribed) { %>
-                            <ul class="pl-0">
-                                <% subscribed.forEach(function(channel) { %>
-                                    <li class="row align-items-center no-gutters border border-primary my-1">
-                                        <div class="p-0 col">
-                                            <a href="/channel/<%= channel.id %>/"><%= channel.name %></a>
-                                        </div>
-                                        <div class="pr-1 p-0 col d-flex flex-row-reverse">
-                                            <img src="<%= channel.image %>" alt="<%= channel.name %>" class="rounded-circle border border-dark minsize-3vw">
-                                        </div>
-                                    </li>
-                                <% }) %>
-                            </ul>
-                        <% }  %>     
+                    <div class="row channelList scrollbar-deep-purple bordered-deep-purple thin m-1">
+                        <div class="container-fluid overflow-auto m-0 px-1 py-0">
+                            <div id="owned-channels" class="user-channels">
+                                <% if (owned) { %>
+                                    <ul class="pl-0">
+                                    <% owned.forEach(function(channel) { %>
+                                        <li class="row align-items-center no-gutters border border-primary my-1">
+                                            <div class="p-0 col">
+                                                <a href="/channel/<%= channel.id %>/"><%= channel.name %></a>
+                                            </div>
+                                            <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                                                <img src="<%= channel.image %>" alt="<%= channel.name %>" class="rounded-circle border border-dark smallavatar">
+                                            </div>
+                                        </li>
+                                    <% }) %>
+                                    </ul>
+                                <% }  %>
+                            </div>
+                        </div>                                                  
                     </div>
-                </div>                                                  
-            </div>
-            <div class="m-0 p-1 col">
-                <a href="channels">Create Channel</a>
-                <a href="channels"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                </div>
+                <div class="col-md-12 col-6 p-0">
+                    <div class="m-0 p-1 col">
+                        <a href="editChannel">Subscribed Channels</a>
+                        <a href="editChannel"><i class="fa fa-cog" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="row channelList scrollbar-deep-purple bordered-deep-purple thin m-1">
+                        <div class="container-fluid overflow-auto m-0 px-1 py-0">
+                            <div id="subscribed-channels" >
+                                <% if (subscribed) { %>
+                                    <ul class="pl-0">
+                                        <% subscribed.forEach(function(channel) { %>
+                                            <li class="row align-items-center no-gutters border border-primary my-1">
+                                                <div class="p-0 col">
+                                                    <a href="/channel/<%= channel.id %>/"><%= channel.name %></a>
+                                                </div>
+                                                <div class="pr-1 p-0 col d-flex flex-row-reverse">
+                                                    <img src="<%= channel.image %>" alt="<%= channel.name %>" class="rounded-circle border border-dark smallavatar">
+                                                </div>
+                                            </li>
+                                        <% }) %>
+                                    </ul>
+                                <% }  %>     
+                            </div>
+                        </div>                                                  
+                    </div>
+                    <div class="m-0 p-1 col">
+                        <a href="channels">Create Channel</a>
+                        <a href="channels"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-10">
+        <div class="col-lg-10 col-md-8 col-12 p-0">
             <div class="container-fluid">
                 <div class="row col m-1 p-0">
                     <div class="col m-0 p-1 border border-dark">Channels</div>
@@ -191,7 +106,7 @@ var subscribed = ("subscribed" in  channels) ? channels.subscribed : false
                     </div>
                     <div class="row p-0 m-0">
                         <div class="my-1 p-0 row align-items-center no-gutters w-100">
-                            <div class="m-0 p-0 col-6 colFriendsList text-center">
+                            <div class="m-0 p-0 col-lg-6 col-12 colFriendsList text-center">
                                 <div class="row m-0 py-2 px-1">
                                     Channel Name
                                 </div>
@@ -212,11 +127,6 @@ var subscribed = ("subscribed" in  channels) ? channels.subscribed : false
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="m-0 p-0 col-6 colFriendsList">
-                                <div class="text-center">
-                                    <!-- <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="rounded-circle border border-dark text-center newAvatarImage">  --> 
-                                </div> 
                             </div>                                                                                   
                         </div>  
                     </div>
@@ -226,7 +136,7 @@ var subscribed = ("subscribed" in  channels) ? channels.subscribed : false
                     <div id="add-user" class="row m-0 p-0 row-horizon d-flex flex-row flex-nowrap scrolling-wrapper">
                         <% if (users) { %>
                             <% users.forEach(function(user) { %>
-                                <div class="col-3 border border-dark m-1 p-1">
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-6 border border-dark m-1 p-1">
                                     <div class="row p-0 m-0 justify-content-center">
                                         <img src="<%= user.image %>" alt="<%= user.image %>" class="rounded-circle border border-dark text-center maxsize-12vw">
                                     </div>
@@ -259,36 +169,6 @@ var subscribed = ("subscribed" in  channels) ? channels.subscribed : false
             </div>
         </div>
     </div>
-</div>
-
-<div id="owned-channels" class="user-channels">
-	<h4>Your Channels</h4>
-<% if (owned) { %>
-	<ul>
-	<% owned.forEach(function(channel) { %>
-		<li>
-			<img src="<%= channel.image %>" alt="<%= channel.name %>">
-			<a href="/channel/<%= channel.id %>/"><%= channel.name %></a>
-			<a href="/channels/delete/<%= channel.id %>/"><i class="fa fa-trash" aria-hidden="true"></i></a>
-		</li>
-	<% }) %>
-	</ul>
-<% }  %>
-</div>
-
-
-<div id="subscribed-channels" >
-	<h4>Subscribed Channels</h4>
-<% if (subscribed) { %>
-	<ul>
-	<% subscribed.forEach(function(channel) { %>
-		<li>
-			<img src="<%= channel.image %>" alt="<%= channel.name %>">
-			<a href="/channel/<%= channel.slug %>/"><%= channel.name %></a>
-		</li>
-	<% }) %>
-	</ul>
-<% }  %>
 </div>
 <%- include('partials/footer'); %>
 

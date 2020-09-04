@@ -208,3 +208,16 @@ ul {
 *[class*='right']{
   text-align: right;
 }
+.vertical{
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.smallavatar{
+  max-width: 35px;
+  max-height: 35px;
+  min-height: 35px;
+  min-width: 35px;
+  object-fit: cover;
+}
