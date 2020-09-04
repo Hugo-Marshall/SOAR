@@ -86,7 +86,7 @@
             </div>
             <div class="row">
                 <% if (locals.errors && locals.errors.profile) { %>
-                    <div class="row justify-content-md-center col-12">
+                    <div class="row justify-content-md-center p-0 col-12">
                         <% locals.errors.profile.forEach(function(error) { %>
                             <div class="col-12 div alert alert-primary alert-dismissible fade show border-dark border" id="textcentre" role="alert">
                                 <p class="mb-0"><%= error %></p>
@@ -126,7 +126,7 @@
             </div>
             <div class="row">
                 <% if (locals.errors && locals.errors.password) { %>
-                    <div class="row justify-content-md-center col-12">
+                    <div class="row justify-content-md-center p-0 col-12">
                         <% locals.errors.password.forEach(function(error) { %>
                             <div class="col-12 div alert alert-primary alert-dismissible fade show border-dark border" id="textcentre" role="alert">
                                 <p class="mb-0"><%= error %></p>
