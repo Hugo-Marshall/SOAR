@@ -33,6 +33,7 @@ var subscribed = ("subscribed" in  channels) ? channels.subscribed : false
                                         <li class="row align-items-center no-gutters border border-primary my-1">
                                             <div class="p-0 col">
                                                 <a href="/channel/<%= channel.id %>/"><%= channel.name %></a>
+                                                <a href="/channel/<%= channel.id %>/" class="btn btn-secondary">Message <%= channel.name %></a>
                                             </div>
                                             <div class="pr-1 p-0 col d-flex flex-row-reverse">
                                                 <img src="<%= channel.image %>" alt="<%= channel.name %>" class="rounded-circle border border-dark smallavatar">
