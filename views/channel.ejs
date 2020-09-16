@@ -5,6 +5,136 @@ var messages = locals.messages
 var user = locals.user
 var participants = (locals.channel.inUsers) ? locals.channel.inUsers : false
 %> 
+
+<div class="container-fluid">
+	<div class="row m-1">
+		<div class="border border-dark col-lg-3 col-md-6 col-12 justify-content-center align-items-center d-flex">
+			<p class="m-0 mr-3">Account</p>
+			<img src="<%= user.photoURL %>" alt="avatar" class="rounded-circle border border-dark smallavatar mr-3">
+			<a href="account" class=""><i class="fa fa-cog" aria-hidden="true"></i></a>
+		</div>
+		<a href="/" class="border border-dark col-lg-3 col-md-6 col-12 justify-content-center align-items-center d-flex">
+			Log Out
+		</a>
+		<div class="dropdown border border-dark col-lg-3 col-md-6 col-12 justify-content-center align-items-center d-flex">
+			<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Channels
+			</button>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+				<button class="dropdown-item" type="button"><a href="channels">Channels</a></button>
+			</div>
+		</div>
+		<div class="border border-dark col-lg-3 col-md-6 col-12 justify-content-center align-items-center d-flex">
+			SOAR
+		</div>
+	</div>
+	<div class="row m-1 no-gutters">
+        <div class="col-lg-2 col-md-4 col-12 col border border-dark p-0 my-1 mx-0">
+            <div class="row m-0">
+                <div class="col-md-12 col-6 p-0">
+                    <div class="m-0 p-1 col">
+						<h4>Channel Members</h4>
+                    </div>
+                    <div class="row userList scrollbar-deep-purple bordered-deep-purple thin m-1">
+                        <div class="container-fluid overflow-auto m-0 px-1 py-0">
+							<% if (participants) { %>
+								<div id="participants">
+									<ul class="list-group">
+									<% participants.forEach(function(user) { %>
+										<li id="user<%= user.id %>">
+											<div class="my-1 row align-items-center no-gutters border border-primary">
+												<div class="p-0 col">
+													<strong><%= user.name %> <small class="text-muted d-none"> typing... </small></strong>
+												</div>
+												<div class="pr-1 p-0 col d-flex flex-row-reverse">
+													<div class="avatar">
+														<img src="<%= user.image %>" alt="<%= user.name %>" class="rounded-circle border border-dark minsize-3vw">
+													</div> 
+												</div>                                                                                   
+											</div> 
+										</li>
+									<% }) %>
+									</ul>
+								</div>
+							<% } else { %>
+								<p><div class="alert alert-primary" role="alert">Make some friends on here and add them to your channels!</div></p>
+							<% }  %>
+                        </div>                                                  
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-10">
+            <div class="row messageList scrollbar-deep-purple bordered-deep-purple thin m-1 mt-0">
+
+                <div class="container-fluid overflow-auto pb-1 pt-0 pl-0 pr-1">
+
+                    <div class="mt-0 mb-2 row no-gutters border border-primary">
+                        <div class="col-2 col">                                          
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" class="rounded-circle border border-dark minsize-7vw">
+                        </div> 
+                        <div class="col-10 col">                                          
+                            <p class="m-auto">
+                                A king and queen once upon a time reigned in a country a great way off, where there were in those days fairies. Now this king and queen had plenty of money, 
+                                and plenty of fine clothes to wear, and plenty of good things to eat and drink, and a coach to ride out in every day: but though they had been married many 
+                                years they had no children, and this grieved them very much indeed. But one day as the queen was walking by the side of the river, at the bottom of the garden, 
+                                she saw a poor little fish, that had thrown itself out of the water, and lay gasping and nearly dead on the bank. 
+                            </p> 
+                        </div>   
+					</div>
+
+					<div id="chat">
+						<% if (messages) { %>
+							<% messages.forEach(function(message) { %>
+							<div class="message <%=message.direction%>" data-time="<%=message.time%>">
+								<div class="user">
+									<img src="<%=message.user.image%>" alt="Image">
+									<p><%=message.user.name%></p>
+								</div>
+								<p><%=message.msg%></p>
+								<small class="text-muted time"></small>
+							</div>
+							<% }) %>
+						<% }  %>
+						</div> 
+
+                </div>                                  
+            </div>
+            <div class="m-0 px-1 pb-0 pt-1 row">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <button class="btn btn-outline-secondary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                        </button>
+                        <div class="dropdown-menu p-0">
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="inputGroupFile02">
+                                    <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
+                                </div>
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="">Upload</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Text input with dropdown button">
+				</div>
+				<div id="message">
+					<form id="message-form">
+						<textarea id="message-box" placeholder="Type your message here"></textarea>
+						<input 
+							data-user='{"uid":"<%= locals.user.uid %>","name":"<%= locals.user.displayName %>","image":"<%= locals.user.photoURL %>"}'
+							data-channel='{"uid":"<%= showChannel.id %>","name":"<%= showChannel.name %>"}'
+							type="hidden" id="chat-info">
+						<button id="send-message" type="submit">Send</button>
+					</form>
+				</div>
+            </div>
+        </div>
+    </div>
+</div>
+
 			<div id="main">
 				<div class="container-fluid">
 					<div class="row">
@@ -57,4 +187,5 @@ var participants = (locals.channel.inUsers) ? locals.channel.inUsers : false
 					</div> <!-- end .row --> 
 				</div><!-- end .container-fluid -->
 			</div><!-- end #main -->
-<%- include('partials/footer'); %>
+
+			<%- include('partials/footer'); %>
