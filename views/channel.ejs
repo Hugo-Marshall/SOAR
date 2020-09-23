@@ -21,7 +21,7 @@ var participants = (locals.channel.inUsers) ? locals.channel.inUsers : false
 			Channels
 			</button>
 			<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-				<button class="dropdown-item" type="button"><a href="channels">Channels</a></button>
+				<button class="dropdown-item" type="button"><a href="/channels">Channels</a></button>
 			</div>
 		</div>
 		<div class="border border-dark col-lg-3 col-md-6 col-12 justify-content-center align-items-center d-flex">
@@ -68,21 +68,10 @@ var participants = (locals.channel.inUsers) ? locals.channel.inUsers : false
 			<h1><%= showChannel.name %></h1>
             <div class="row messageList scrollbar-deep-purple bordered-deep-purple thin m-1 mt-0">
                 <div class="container-fluid overflow-auto pb-1 pt-0 pl-0 pr-1">
-                    <div class="mt-0 mb-2 row no-gutters border border-primary">
-                        <div class="col-2 col">                                          
-                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" class="rounded-circle border border-dark minsize-7vw">
-                        </div> 
-                        <div class="col-10 col">                                          
-                            <p class="m-auto">
-                                message 
-                            </p> 
-                        </div>   
-					</div>
-
 					<div id="chat" class="">
 						<% if (messages) { %>
 							<% messages.forEach(function(message) { %>
-							<div class="message <%=message.direction%> mt-0 mb-2 row no-gutters border border-primary" data-time="<%=message.time%>">
+							<div class="message <%=message.direction%> row p-0 m-0" data-time="<%=message.time%>">
 								<div class="col-2 col">
 									<div class="user">
 										<img src="<%=message.user.image%>" alt="Image">
@@ -97,7 +86,6 @@ var participants = (locals.channel.inUsers) ? locals.channel.inUsers : false
 							<% }) %>
 						<% }  %>
 					</div> 
-
                 </div>                                  
             </div>
             <div class="m-0 px-1 pb-0 pt-1 row">
