@@ -15,7 +15,14 @@
             <div class="row">
                 <div class="border border-dark col-lg-3 col-md-6 col-12 justify-content-center align-items-center d-flex">
                     <p class="m-0 mr-3">Account</p>
-                    <img src="<%= user.photoURL %>" alt="avatar" class="rounded-circle border border-dark smallavatar mr-3">
+                    <div>
+                        <% if (user.photoURL) { %>
+                            <img src="<%= user.photoURL %>" class="rounded-circle border border-dark smallavatar mr-3">
+                        <% } %>
+                        <% if (!user.photoURL) { %>
+                            <img src="img/dummy.png" class="rounded-circle border border-dark smallavatar mr-3">
+                        <% } %>
+                    </div>
                     <a href="account" class=""><i class="fa fa-cog" aria-hidden="true"></i></a>
                 </div>
                 <a href="/" class="border border-dark col-lg-3 col-md-6 col-12 justify-content-center align-items-center d-flex">
@@ -61,7 +68,14 @@
                             <strong><%= locals.user.displayName %></strong>
                         </div>
                         <div class="col-6 text-center p-0">
-                            <img src="<%= user.photoURL %>" alt="avatar" class="rounded-circle border border-dark maxsize-6vw"> 
+                            <div>
+                                <% if (user.photoURL) { %>
+                                    <img src="<%= user.photoURL %>" class="rounded-circle border border-dark maxsize-6vw"> 
+                                <% } %>
+                                <% if (!user.photoURL) { %>
+                                    <img src="img/dummy.png" class="rounded-circle border border-dark maxsize-6vw"> 
+                                <% } %>
+                            </div>
                         </div>                                                                                   
                     </div>  
                 </div>
